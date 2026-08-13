@@ -1,0 +1,107 @@
+:root {
+  --ink-900: #1b2733;
+  --ink-800: #152029;
+  --ink-600: #41505f;
+  --ink-400: #5b6874;
+  --ink-300: #8b98a4;
+  --paper: #fdfbf7;
+  --paper-card: #ffffff;
+  --paper-warm: #fdf4de;
+  --sun: #ffdd44;
+  --sun-shade: #8a4a02;
+  --ember: #fa6404;
+  --sky: #68cbf8;
+  --coral: #e45863;
+
+  --text-strong: var(--ink-900);
+  --text-body: var(--ink-600);
+  --text-muted: var(--ink-300);
+  --text-on-accent: var(--ink-900);
+  --text-on-invert: var(--paper);
+
+  --surface-page: var(--paper);
+  --surface-card: var(--paper-card);
+  --surface-warm: var(--paper-warm);
+  --surface-invert: var(--ink-900);
+  --surface-invert-deep: var(--ink-800);
+  --surface-raised: rgba(253, 251, 247, 0.07);
+
+  --accent-primary: var(--sun);
+  --accent-secondary: var(--ember);
+  --accent-support: var(--sky);
+  --accent-warm: var(--coral);
+
+  --border-hair: rgba(27, 39, 51, 0.1);
+  --border-strong: rgba(27, 39, 51, 0.2);
+  --border-hair-invert: rgba(253, 251, 247, 0.16);
+  --border-strong-invert: rgba(253, 251, 247, 0.28);
+
+  --link: var(--ember);
+  --link-hover: #c74f02;
+
+  --font-display: var(--font-merriweather), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Helvetica, sans-serif;
+
+  --weight-display: 900;
+  --weight-bold: 700;
+  --weight-medium: 600;
+  --weight-regular: 400;
+
+  --size-display-xl: 54px;
+  --size-display-lg: 40px;
+  --size-display-md: 34px;
+  --size-display-sm: 24px;
+  --size-title: 21px;
+  --size-body-lg: 17px;
+  --size-body: 15px;
+  --size-body-sm: 14.5px;
+  --size-meta: 12px;
+  --size-eyebrow: 11px;
+
+  --leading-display: 1.12;
+  --leading-title: 1.25;
+  --leading-body: 1.65;
+
+  --tracking-display: -1.4px;
+  --tracking-display-sm: -0.8px;
+  --tracking-eyebrow: 3px;
+  --tracking-meta: 1.5px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 28px;
+  --space-7: 36px;
+  --space-8: 48px;
+  --space-9: 60px;
+  --space-10: 70px;
+  --space-11: 96px;
+
+  --gutter: var(--space-9);
+  --section-y: var(--space-10);
+  --container: 1120px;
+
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 6px 20px rgba(27, 39, 51, 0.05);
+  --shadow-lift: 0 18px 44px rgba(27, 39, 51, 0.12);
+  --shadow-sun: 0 14px 32px rgba(250, 100, 4, 0.18);
+  --shadow-invert: 0 18px 40px rgba(0, 0, 0, 0.3);
+
+  --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+  --duration: 160ms;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --gutter: var(--space-5);
+    --section-y: var(--space-8);
+  }
+}

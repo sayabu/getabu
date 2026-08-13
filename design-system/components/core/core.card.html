@@ -1,0 +1,37 @@
+<!-- @dsCard group="Components" viewport="700x260" subtitle="Buttons, inputs, badges and the brand mark" name="Core" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"><style>
+body{padding:20px}.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-sans);font-weight:var(--weight-bold);font-size:var(--size-body);line-height:1;border-radius:var(--radius-md);border:1.5px solid transparent;padding:17px 28px;cursor:pointer}
+.btn-primary{background:var(--accent-primary);color:var(--text-on-accent)}
+.btn-secondary{border-color:var(--border-strong);color:var(--text-strong);background:transparent}
+.btn-invert{background:var(--surface-invert);color:var(--text-on-invert)}
+.btn-ghost{background:transparent;border:0;padding:0;color:var(--accent-secondary)}
+.btn-sm{padding:11px 18px}.btn-lg{padding:19px 32px}
+.inp{font-family:var(--font-sans);font-size:var(--size-body-sm);padding:13px 15px;border-radius:var(--radius-md);border:1.5px solid var(--border-strong);background:var(--paper-card);color:var(--text-strong);min-width:200px}
+.badge{display:inline-flex;border-radius:var(--radius-pill);padding:6px 12px;font:var(--weight-medium) 10px/1 var(--font-sans);letter-spacing:2px;text-transform:uppercase}
+.card{border-radius:var(--radius-lg);padding:var(--space-6);background:var(--surface-card);border:1px solid var(--border-hair);box-shadow:var(--shadow-card)}
+h3{font:900 var(--size-title)/var(--leading-title) var(--font-display);margin:6px 0 0}
+p{margin:0;font:var(--weight-regular) var(--size-body-sm)/var(--leading-body) var(--font-sans);color:var(--ink-400)}
+</style></head><body>
+<div class="row">
+  <a class="btn btn-primary btn-lg" style="box-shadow:var(--shadow-sun)">Start Learning</a>
+  <a class="btn btn-secondary">Work with me</a>
+  <a class="btn btn-invert btn-sm">Send it</a>
+  <a class="btn btn-ghost">All posts →</a>
+  <a class="btn btn-primary" style="opacity:.45">Disabled</a>
+</div>
+<div class="row" style="margin-top:16px">
+  <input class="inp" type="email" placeholder="you@company.com">
+  <span class="badge" style="background:var(--surface-invert);color:var(--accent-primary)">Flagship</span>
+  <span class="badge" style="background:var(--surface-card);border:1px solid var(--border-hair);color:var(--text-body)">PMP</span>
+  <div style="display:flex;align-items:center;gap:11px">
+    <div style="width:34px;height:34px;border-radius:var(--radius-squircle);background:var(--sun);display:flex;align-items:center;justify-content:center;font:900 19px/1 var(--font-display);color:var(--ink-900)">A</div>
+    <span style="font:900 19px/1 var(--font-display)">Abu</span>
+  </div>
+</div>
+<div class="row" style="margin-top:18px;align-items:stretch">
+  <div style="flex:1;font:900 40px/1 var(--font-display)">18<div style="margin-top:6px;font:var(--weight-medium) 11px/1.4 var(--font-sans);letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted)">Years in telecom</div></div>
+  <div style="flex:1;font:900 40px/1 var(--font-display)">40+<div style="margin-top:6px;font:var(--weight-medium) 11px/1.4 var(--font-sans);letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted)">Deployments</div></div>
+  <div style="flex:1;font:900 40px/1 var(--font-display)">12k<div style="margin-top:6px;font:var(--weight-medium) 11px/1.4 var(--font-sans);letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted)">Learners reached</div></div>
+</div>
+</body></html>

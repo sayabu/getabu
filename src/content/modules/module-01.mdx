@@ -1,0 +1,182 @@
+<ModuleHeader
+  title="Module 1 — Why 6G? The Road from 1G to IMT-2030"
+  meta="6G Fundamentals Tutorial | Module 1 of 10  |  Estimated time: 30 minutes"
+/>
+
+<ModuleNav
+  position="top"
+  current="Module 1"
+  next={{ label: "Module 2: The Network That Sees (ISAC)", href: "/modules/2" }}
+  jumpLinks={[
+    { label: "Lesson 1.1", href: "#lesson-1-1" },
+    { label: "1.2", href: "#lesson-1-2" },
+    { label: "1.3", href: "#lesson-1-3" },
+    { label: "1.4", href: "#lesson-1-4" },
+    { label: "Acronym Decoder", href: "#acronym-decoder" },
+    { label: "Quiz", href: "#quiz" },
+  ]}
+/>
+
+<LearningObjectives
+  items={[
+    "The 40-year story of 1G to 6G — in one family-reunion analogy",
+    "Who actually decides what '6G' means (spoiler: not marketing departments)",
+    "The IMT-2030 'hexagon ’: the six superpowers 6G must deliver",
+    "How 3GPP turns big dreams into engineering recipes, Release by Release",
+    "8 acronyms with easy explanations",
+  ]}
+/>
+
+<Callout variant="terminology">
+  Throughout this tutorial, when people casually say 'the cell tower does X,' the real workers are the antennas mounted on the tower (plus the radio brain connected to them). The tower itself is just the tall metal stand. We say 'tower antennas' when precision matters.
+</Callout>
+
+<Lesson id="lesson-1-1" title="Lesson 1.1 — The Family Reunion: Meet the Generations">
+
+Picture a family reunion where every generation shows up. Grandpa 1G (1980s) could only make voice calls — on a phone the size of a brick, with the battery life of a mayfly. Uncle 2G (1990s) learned to text. Aunt 3G (2000s) brought the mobile internet — slow, but revolutionary. Cousin 4G (2010s) made video streaming and app stores normal; it's why ride-sharing and social video exist. Sibling 5G (2020s) added serious speed, low delay, and the ability to connect factories, cars, and millions of gadgets.
+
+Now the family is expecting a new arrival around 2030: 6G. And like every new kid, it's expected to do everything the older ones did — plus things they never dreamed of: sensing the physical world, running AI natively, and connecting everywhere, including from space.
+
+<Figure
+  id="1.1"
+  src="/images/module-01/img-1-1.png"
+  alt="Timeline comparing 1G through 6G: voice calls, texting, mobile internet, streaming apps, connected industries, and networks that sense, use AI, and provide coverage everywhere."
+/>
+
+<Callout variant="takeaway">
+  Each 'G' arrives roughly every 10 years, and each one didn't just get faster — it unlocked a new category of life: calls, texts, mobile web, streaming apps, connected industries. 6G's new category: a network that senses, thinks, and covers everywhere.
+</Callout>
+
+</Lesson>
+
+<Lesson id="lesson-1-2" title="Lesson 1.2 — Who Decides What '6G' Even Means?">
+
+Marketing teams would love to slap '6G' on anything. Fortunately, there's a referee: the ITU, a United Nations agency. The ITU publishes a framework defining what the next generation must achieve. For 6G, that framework is called IMT-2030 (published in 2023). Think of the ITU as the Olympic committee: it doesn't train the athletes, but it defines the events and the qualifying standards.
+
+The 'athletes' are trained by 3GPP — a global partnership of carriers, phone makers, and chip companies. 3GPP writes the excruciatingly detailed engineering recipes (standards) so that a phone built in one country works on a network in another. No 3GPP, no roaming, no interoperability — just chaos.
+
+<Figure
+  id="1.2"
+  src="/images/module-01/img-1-2.png"
+  alt="Diagram showing the ITU defining global 6G requirements through IMT-2030 and 3GPP turning those requirements into detailed technical standards."
+/>
+
+</Lesson>
+
+<Lesson id="lesson-1-3" title="Lesson 1.3 — The IMT-2030 Hexagon: Six Superpowers">
+
+The ITU's 6G vision is usually depicted as a hexagon—six capability areas. Three are upgrades of 5G's promises, three are genuinely new:
+
+- Immersive communication (upgraded): richer XR, holograms, telepresence — Module 3.
+- Hyper-reliable, low-latency communication (upgraded): remote surgery-grade dependability.
+- Massive communication (upgraded): billions of devices, including battery-free ones — Module 4.
+- Ubiquitous connectivity (new): coverage everywhere, including via satellites — Module 8.
+- AI and communication (new): AI built into the network's DNA — Module 7.
+- Integrated sensing and communication (new): the network as radar — Module 2.
+
+Wrapped around the hexagon are cross-cutting goals every 6G design must respect: sustainability, security, resilience, privacy, and connecting the unconnected — Module 9 covers the first two in depth.
+
+<Figure
+  id="1.3"
+  src="/images/module-01/img-1-3.png"
+  alt="IMT-2030 hexagon showing six 6G capability areas: immersive, hyper-reliable low-latency, massive, ubiquitous, AI and communication, and integrated sensing and communication."
+/>
+
+<SoundSmart
+  quote={'"The interesting shift in IMT-2030 is that half the hexagon isn\'t about moving bits faster — sensing, AI-native, and ubiquitous coverage are new usage scenarios, not just better KPIs."'}
+  clue={"Older generations mostly promised 'faster and smoother.' 6G's official goals include three brand-new abilities — sensing the world, built-in AI, and coverage everywhere — which are new jobs, not just better numbers."}
+/>
+
+</Lesson>
+
+<Lesson id="lesson-1-4" title="Lesson 1.4 — From Vision to Reality: The 3GPP Release Train">
+
+3GPP publishes standards like a train that departs on schedule, batch by batch. Each batch is a Release. Here's the stretch that matters for 6G:
+
+- Rel-18 & Rel-19 (2024–2026): branded '5G-Advanced' — 5G's final glow-up, plus early 6G homework (like ISAC channel studies).
+- Rel-20 (2025–2027): the formal 6G study phase — committees explore what's feasible before promising anything.
+- Rel-21 (~2027–2029): the first 6G specifications — the actual buildable recipes.
+- ~2030: commercial 6G launches, aligned with the ITU's IMT-2030 timeline.
+
+Within 3GPP, work is divided among Technical Specification Groups (TSGs) and their Working Groups (WGs): think of them as departments and teams. When you hear an expert say 'RAN1 is debating the waveform,' they mean a specific working group arguing about a specific recipe ingredient.
+
+<Figure
+  id="1.4"
+  src="/images/module-01/img-1-4.png"
+  alt="3GPP release timeline from 5G-Advanced in Releases 18 and 19, through 6G studies in Release 20 and initial 6G specifications in Release 21, toward commercial launch around 2030."
+/>
+
+<SoundSmart
+  quote={'"Rel-20 is study-only — don\'t expect normative 6G text until Rel-21, so anything you read today is a proposal, not a spec."'}
+  clue={"In Rel-20, 3GPP is still researching options ('study items'). Binding rules ('normative specifications') come in Rel-21. So today's 6G headlines describe candidates, not final decisions."}
+/>
+
+</Lesson>
+
+<AcronymDecoder
+  rows={[
+    {
+      acronym: "ITU",
+      standsFor: "International Telecommunication Union",
+      explanation: "The United Nations agency that acts as the referee for global wireless. It decides what each 'G' must achieve before anyone can call it that.",
+    },
+    {
+      acronym: "IMT-2030",
+      standsFor: "International Mobile Telecommunications for 2030",
+      explanation: "The ITU's official name and wish list for 6G. If a technology meets this list, it earns the 6G badge.",
+    },
+    {
+      acronym: "3GPP",
+      standsFor: "3rd Generation Partnership Project",
+      explanation: "The world's biggest engineering club (carriers, phone makers, chip makers) that writes the detailed recipes — the standards — for how mobile networks actually work.",
+    },
+    {
+      acronym: "RAN",
+      standsFor: "Radio Access Network",
+      explanation: "Everything between your phone and the internet's front door: the tower antennas, the radios, and their controllers.",
+    },
+    {
+      acronym: "NR",
+      standsFor: "New Radio",
+      explanation: "The official name of the 5G radio system. 6G's radio will be its successor.",
+    },
+    {
+      acronym: "Rel-XX",
+      standsFor: "Release (e.g., Rel-20)",
+      explanation: "3GPP publishes its recipes in numbered batches called Releases — like software versions. Rel-20 starts the formal 6G studies; Rel-21 writes the first 6G specs.",
+    },
+    {
+      acronym: "TSG / WG",
+      standsFor: "Technical Specification Group / Working Group",
+      explanation: "The committees inside 3GPP. TSGs are the departments; WGs are the teams inside them doing the detailed homework.",
+    },
+    {
+      acronym: "KPI",
+      standsFor: "Key Performance Indicator",
+      explanation: "A measurable target, like 'top speed' or 'delay.' Each generation is defined by the KPIs it must hit.",
+    },
+  ]}
+/>
+
+<Quiz
+  questions={[
+    "1. Who officially decides what counts as '6G,' and what is their requirements document called?",
+    "2. What does 3GPP actually produce?",
+    "3. Which 3GPP Release kicks off formal 6G study items, and which one targets the first 6G specifications?",
+    "4. Name three of the six capability areas in the IMT-2030 'hexagon.'",
+    "5. Roughly when is commercial 6G expected to launch?",
+  ]}
+  answers={[
+    "1. The ITU; its 6G framework is called IMT-2030.",
+    "2. Detailed technical standards ('recipes') published in numbered Releases that vendors and carriers build to.",
+    "3. Rel-20 starts the studies; Rel-21 targets the first 6G specs.",
+    "4. Any three of: immersive communication, hyper-reliable low-latency, massive communication, ubiquitous connectivity, AI & communication, sensing & communication (plus cross-cutting goals like sustainability and security).",
+    "5. Around 2030, following the pattern of a new 'G' roughly every decade.",
+  ]}
+/>
+
+<ModuleNav
+  position="bottom"
+  previous={{ label: "Back: Course Home", href: "/" }}
+  next={{ label: "Next: Module 2 — The Network That Sees (ISAC)", href: "/modules/2" }}
+/>

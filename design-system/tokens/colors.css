@@ -1,0 +1,43 @@
+:root {
+  /* Base palette */
+  --ink-900: #1B2733;
+  --ink-800: #152029;
+  --ink-600: #41505F;
+  --ink-400: #5B6874;
+  --ink-300: #8B98A4;
+  --paper: #FDFBF7;
+  --paper-card: #FFFFFF;
+  --paper-warm: #FDF4DE;
+  --sun: #FFDD44;
+  --sun-shade: #8A4A02;   /* only legible text tone to sit on --sun besides ink */
+  --ember: #FA6404;
+  --sky: #68CBF8;
+  --coral: #E45863;
+
+  /* Semantic aliases */
+  --text-strong: var(--ink-900);
+  --text-body: var(--ink-600);
+  --text-muted: var(--ink-300);
+  --text-on-accent: var(--ink-900);
+  --text-on-invert: var(--paper);
+
+  --surface-page: var(--paper);
+  --surface-card: var(--paper-card);
+  --surface-warm: var(--paper-warm);
+  --surface-invert: var(--ink-900);
+  --surface-invert-deep: var(--ink-800);
+  --surface-raised: rgba(253, 251, 247, 0.07);
+
+  --accent-primary: var(--sun);
+  --accent-secondary: var(--ember);
+  --accent-support: var(--sky);
+  --accent-warm: var(--coral);
+
+  --border-hair: rgba(27, 39, 51, 0.10);
+  --border-strong: rgba(27, 39, 51, 0.20);
+  --border-hair-invert: rgba(253, 251, 247, 0.16);
+  --border-strong-invert: rgba(253, 251, 247, 0.28);
+
+  --link: var(--ember);
+  --link-hover: #C74F02;
+}

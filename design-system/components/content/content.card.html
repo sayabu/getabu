@@ -1,0 +1,43 @@
+<!-- @dsCard group="Components" viewport="700x330" subtitle="Tutorial cards, post preview and email capture" name="Content" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"><style>
+body{padding:20px}.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-sans);font-weight:var(--weight-bold);font-size:var(--size-body);line-height:1;border-radius:var(--radius-md);border:1.5px solid transparent;padding:17px 28px;cursor:pointer}
+.btn-primary{background:var(--accent-primary);color:var(--text-on-accent)}
+.btn-secondary{border-color:var(--border-strong);color:var(--text-strong);background:transparent}
+.btn-invert{background:var(--surface-invert);color:var(--text-on-invert)}
+.btn-ghost{background:transparent;border:0;padding:0;color:var(--accent-secondary)}
+.btn-sm{padding:11px 18px}.btn-lg{padding:19px 32px}
+.inp{font-family:var(--font-sans);font-size:var(--size-body-sm);padding:13px 15px;border-radius:var(--radius-md);border:1.5px solid var(--border-strong);background:var(--paper-card);color:var(--text-strong);min-width:200px}
+.badge{display:inline-flex;border-radius:var(--radius-pill);padding:6px 12px;font:var(--weight-medium) 10px/1 var(--font-sans);letter-spacing:2px;text-transform:uppercase}
+.card{border-radius:var(--radius-lg);padding:var(--space-6);background:var(--surface-card);border:1px solid var(--border-hair);box-shadow:var(--shadow-card)}
+h3{font:900 var(--size-title)/var(--leading-title) var(--font-display);margin:6px 0 0}
+p{margin:0;font:var(--weight-regular) var(--size-body-sm)/var(--leading-body) var(--font-sans);color:var(--ink-400)}
+</style></head><body>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:stretch">
+  <div class="card" style="display:flex;flex-direction:column;gap:8px">
+    <div style="font:900 30px/1 var(--font-display);color:var(--accent-support)">01</div>
+    <h3>Basics of 6G</h3><p>Spectrum, architecture, and what changes for the people running the network.</p>
+    <a style="margin-top:auto;padding-top:14px;font:var(--weight-bold) 13.5px/1 var(--font-sans);color:var(--accent-secondary)">9 lessons →</a>
+  </div>
+  <div class="card" style="background:var(--accent-primary);box-shadow:var(--shadow-sun);display:flex;flex-direction:column;gap:8px">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="font:900 30px/1 var(--font-display)">03</div>
+      <span class="badge" style="background:var(--surface-invert);color:var(--accent-primary)">Flagship</span>
+    </div>
+    <h3>PXPI Framework</h3><p style="color:var(--sun-shade)">Project management built for infrastructure delivery.</p>
+    <a style="margin-top:auto;padding-top:14px;font:var(--weight-bold) 13.5px/1 var(--font-sans);color:var(--text-on-accent)">Full course →</a>
+  </div>
+  <div style="background:var(--surface-card);border:1px solid var(--border-hair);border-radius:var(--radius-lg);overflow:hidden">
+    <div style="height:96px;background:var(--accent-support);display:flex;align-items:center;justify-content:center;font:var(--weight-medium) 11px/1 var(--font-sans);letter-spacing:2px;text-transform:uppercase;color:rgba(27,39,51,.5)">Image</div>
+    <div style="padding:var(--space-5)">
+      <div style="font:var(--weight-regular) var(--size-meta)/1 var(--font-sans);letter-spacing:var(--tracking-meta);text-transform:uppercase;color:var(--text-muted);margin-bottom:10px">12 Jul · 6 min</div>
+      <div style="font:900 19px/1.3 var(--font-display)">What the first 6G trials actually measured</div>
+    </div>
+  </div>
+</div>
+<div style="margin-top:14px;background:var(--surface-card);border:1px solid var(--border-hair);border-radius:var(--radius-xl);padding:var(--space-6)">
+  <div style="font:var(--weight-bold) 16px/1.3 var(--font-sans);margin-bottom:8px">Send me the PXPI pack</div>
+  <div style="font:var(--weight-regular) 14px/1.55 var(--font-sans);color:var(--ink-400);margin-bottom:16px">Canvas, checklist and templates. One email, no drip campaign.</div>
+  <div class="row"><input class="inp" type="email" placeholder="you@company.com"><a class="btn btn-invert btn-sm">Send it</a></div>
+</div>
+</body></html>

@@ -1,0 +1,29 @@
+:root {
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, sans-serif;
+
+  --weight-display: 900;
+  --weight-bold: 700;
+  --weight-medium: 600;
+  --weight-regular: 400;
+
+  --size-display-xl: 54px;   /* hero H1, clamps down to 38px */
+  --size-display-lg: 40px;
+  --size-display-md: 34px;   /* section H2 */
+  --size-display-sm: 24px;
+  --size-title: 21px;        /* card H3 */
+  --size-body-lg: 17px;
+  --size-body: 15px;
+  --size-body-sm: 14.5px;
+  --size-meta: 12px;
+  --size-eyebrow: 11px;
+
+  --leading-display: 1.12;
+  --leading-title: 1.25;
+  --leading-body: 1.65;
+
+  --tracking-display: -1.4px;
+  --tracking-display-sm: -0.8px;
+  --tracking-eyebrow: 3px;
+  --tracking-meta: 1.5px;
+}

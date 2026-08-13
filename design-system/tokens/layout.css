@@ -1,0 +1,37 @@
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 28px;
+  --space-7: 36px;
+  --space-8: 48px;
+  --space-9: 60px;
+  --space-10: 70px;
+  --space-11: 96px;
+
+  --gutter: var(--space-9);
+  --section-y: var(--space-10);
+  --container: 1120px;
+
+  --radius-sm: 10px;
+  --radius-md: 12px;   /* buttons, inputs */
+  --radius-lg: 18px;   /* cards */
+  --radius-xl: 24px;   /* media, panels */
+  --radius-pill: 999px;
+  --radius-squircle: 11px; /* logo tile at 34px; scale ~0.32 of the side */
+
+  --shadow-card: 0 6px 20px rgba(27, 39, 51, 0.05);
+  --shadow-lift: 0 18px 44px rgba(27, 39, 51, 0.12);
+  --shadow-sun: 0 14px 32px rgba(250, 100, 4, 0.18);
+  --shadow-invert: 0 18px 40px rgba(0, 0, 0, 0.30);
+
+  --blob-blur: 16px;
+  --blob-opacity-sun: 0.40;
+  --blob-opacity-sky: 0.28;
+  --blob-opacity-ember: 0.30;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+  --duration: 160ms;
+}
