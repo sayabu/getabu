@@ -16,16 +16,23 @@ type ModuleNavProps = {
 
 export function ModuleNav({ position, previous, current, next, jumpLinks = [] }: ModuleNavProps) {
   return (
-    <nav className={styles.moduleNav} aria-label={`${position === "top" ? "Top" : "Bottom"} module navigation`}>
-      <h2 className={styles.navTitle}>🧭 NAVIGATION</h2>
-      <div className={styles.navRouteRow}>
-        {previous ? (
-          <Link href={previous.href}>{position === "bottom" ? "◀ " : ""}{previous.label}</Link>
-        ) : (
-          <span>Start here!</span>
-        )}
-        {current ? <span className={styles.currentModule}>You are here: {current}</span> : null}
-        <Link href={next.href}>{next.label} ▶</Link>
+    <nav
+      className={`${styles.moduleNav} ${
+        position === "top" ? styles.moduleNavTop : styles.moduleNavBottom
+      }`}
+      aria-label={`${position === "top" ? "Top" : "Bottom"} module navigation`}
+    >
+      <div className={styles.navPrimary}>
+        <h2 className={styles.navTitle}>🧭 NAVIGATION</h2>
+        <div className={styles.navRouteRow}>
+          {previous ? (
+            <Link href={previous.href}>{position === "bottom" ? "◀ " : ""}{previous.label}</Link>
+          ) : (
+            <span>Start here!</span>
+          )}
+          {current ? <span className={styles.currentModule}>You are here: {current}</span> : null}
+          <Link href={next.href}>{next.label} ▶</Link>
+        </div>
       </div>
       {jumpLinks.length > 0 ? (
         <div className={styles.jumpLinks}>

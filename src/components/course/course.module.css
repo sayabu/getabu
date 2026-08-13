@@ -117,11 +117,26 @@
 }
 
 .moduleNav {
-  padding: var(--space-6);
+  overflow: hidden;
   border: 1px solid var(--border-hair);
   border-radius: var(--radius-lg);
   background: var(--surface-card);
   box-shadow: var(--shadow-card);
+}
+
+.navPrimary {
+  padding: var(--space-6);
+}
+
+.moduleNavTop .navPrimary {
+  background: var(--sun);
+}
+
+.moduleNavTop .navTitle,
+.moduleNavTop .navRouteRow,
+.moduleNavTop .navRouteRow a,
+.moduleNavTop .currentModule {
+  color: var(--ink-900);
 }
 
 .navTitle,
@@ -166,6 +181,25 @@
   padding-top: var(--space-4);
   border-top: 1px solid var(--border-hair);
   font-size: var(--size-body-sm);
+}
+
+.moduleNavTop .jumpLinks {
+  margin-top: 0;
+  padding: var(--space-5) var(--space-6);
+  border-top: 0;
+  background: var(--surface-invert);
+}
+
+.moduleNavTop .jumpLinks span {
+  color: var(--text-on-invert);
+}
+
+.moduleNavTop .jumpLinks a {
+  color: var(--sun);
+}
+
+.moduleNavTop .jumpLinks a:hover {
+  color: var(--paper-warm);
 }
 
 .jumpLinks span {
