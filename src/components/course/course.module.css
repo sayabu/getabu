@@ -180,7 +180,7 @@
   margin-top: var(--space-5);
   padding-top: var(--space-4);
   border-top: 1px solid var(--border-hair);
-  font-size: var(--size-body-sm);
+  font-size: var(--size-body);
 }
 
 .moduleNavTop .jumpLinks {
@@ -448,7 +448,7 @@
   border-collapse: separate;
   border-spacing: 0;
   color: var(--text-body);
-  font-size: var(--size-body-sm);
+  font-size: var(--size-body);
 }
 
 .decoder th,
