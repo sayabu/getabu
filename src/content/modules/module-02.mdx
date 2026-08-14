@@ -1,0 +1,232 @@
+<ModuleHeader
+  title="Module 2 — The Network That Sees: ISAC"
+  meta="6G Fundamentals Tutorial  |  Module 2 of 10  |  Estimated time: 35 minutes"
+/>
+
+<ModuleNav
+  position="top"
+  previous={{ label: "Module 1: Why 6G?", href: "/modules/1" }}
+  current="Module 2"
+  next={{ label: "Module 3: Immersive Worlds", href: "/modules/3" }}
+  jumpLinks={[
+    { label: "Lesson 2.1", href: "#lesson-2-1" },
+    { label: "2.2", href: "#lesson-2-2" },
+    { label: "2.3", href: "#lesson-2-3" },
+    { label: "2.4", href: "#lesson-2-4" },
+    { label: "Acronym Decoder", href: "#acronym-decoder" },
+    { label: "Quiz", href: "#quiz" },
+  ]}
+/>
+
+<LearningObjectives
+  items={[
+    "What Integrated Sensing and Communication (ISAC) is, in one sentence",
+    "How cell tower antennas can act like radar without interrupting your Netflix stream",
+    "Four real-world ISAC use cases (drones, traffic, gestures, weather)",
+    "Why can’t 5G do this — and what 3GPP is changing so 6G can",
+    "8 acronyms with easy explanations",
+  ]}
+/>
+
+<Callout variant="terminology">
+  When people casually say 'the cell tower does X,' the real workers are the antennas mounted on the tower (plus the radio brain connected to them). The tower itself is just the tall metal stand. In this tutorial we say 'tower antennas' when precision matters.
+</Callout>
+
+<Lesson id="lesson-2-1" title="Lesson 2.1 — The Big Idea: A Bat That Also Delivers Pizza">
+
+Imagine a bat. Bats send out sound waves, listen to the echoes, and build a picture of the world — that's echolocation. Now imagine that same bat is also your pizza delivery driver, dropping off dinner while it maps the neighborhood. It does both jobs with the same set of wings and the same squeaks.
+
+That's ISAC. Today, cell tower antennas have one job: move your data (the pizza). With ISAC, the same radio waves that carry your video call also bounce off objects — cars, drones, people, raindrops — and return echoes. The network reads those echoes and 'sees' its environment. One signal, two jobs: communication + sensing.
+
+<Figure
+  id="2.1"
+  src="/images/module-02/img-2-1.png"
+  alt="A bat delivering pizza while using echoes to map its surroundings, illustrating how ISAC uses the same radio signal for communication and sensing."
+/>
+
+<Callout variant="takeaway">
+  ISAC turns the radio signals already in the air into a giant, invisible radar system — no new hardware on the objects being sensed. No SIM card, no battery, no app required.
+</Callout>
+
+</Lesson>
+
+<Lesson id="lesson-2-2" title="Lesson 2.2 — How It Works (No Math, Promise)">
+
+### Step 1: Send
+
+The base station (3GPP calls it a gNB — see the Acronym Decoder) transmits radio waves as usual.
+
+### Step 2: Bounce
+
+Some waves hit objects and reflect back. How strongly an object reflects is its Radar Cross Section (RCS). Think of shining a flashlight around a dark room: a mirror bounces the light straight back at you, while a black sweater swallows it. RCS is simply a number for how much of the radio 'flashlight' an object bounces back — big number, easy to detect; tiny number, nearly invisible. A metal drone is like a disco ball — flashy, easy to spot. A pigeon is like a matte-black yoga mat — barely reflects anything.
+
+### Step 3: Listen & Compute
+
+The tower measures three things from the echo: how long it took (distance), which direction it came from (angle), and how the frequency shifted (speed — the Doppler effect). Here's the Doppler effect in plain terms: 
+
+- When something moving toward you sends out waves, the waves get squished together (higher pitch/frequency); 
+- When it moves away, they get stretched apart (lower pitch/frequency). 
+
+It's why an ambulance siren sounds high as it approaches and suddenly drops as it passes. Radio waves do the exact same thing, so the amount of 'squish' or 'stretch' in the echo tells the network how fast the object is moving — and in which direction. 
+
+I have added a section at the end of this module (before the quiz) to explain the Doppler Effect further.
+
+### Step 4: Fuse
+
+Multiple towers (i.e., antennas) share echoes and combine them — like three friends describing a stranger from different angles until you have a full picture. This multi-tower teamwork is a major topic in 3GPP's 6G study work (Release 20).
+
+<Figure
+  id="2.2"
+  src="/images/module-02/img-2-2.png"
+  alt="Four-step ISAC process: a base station sends radio waves, objects reflect them, the network measures distance, angle, and speed, and multiple towers combine their observations."
+/>
+
+<SoundSmart
+  quote={"\"ISAC is basically turning the RAN into a distributed radar — the sensing comes almost free because we're reusing the waveform we already transmit.\""}
+  clue={"the whole radio network (RAN) becomes one big team of radar stations, and it costs little extra because it recycles the signals it was already sending."}
+/>
+
+</Lesson>
+
+<Lesson id="lesson-2-3" title="Lesson 2.3 — Four Use Cases You'll Actually Talk About">
+
+### 1. Drone Detection & Airspace Safety
+
+Airports and stadiums need to spot rogue drones. Dedicated radar is expensive; cell towers are already everywhere. ISAC lets the existing network flag a drone the moment it crosses a fence line — even if the drone's owner never connected it to anything.
+
+### 2. Smart Traffic & Road Safety
+
+Towers along a highway can sense vehicle positions and speeds — including old cars with zero connectivity — and warn connected cars about a stalled vehicle around a blind curve. Think of the network as a crossing guard with X-ray vision.
+
+### 3. Gesture & Presence Sensing
+
+Radio echoes are sensitive enough to detect a wave of your hand, a fall in an elderly person's home, or whether a room is occupied (great for energy savings). Your walls get a sixth sense — no cameras, which is a privacy win.
+
+### 4. Environmental & Weather Sensing
+
+Rain, fog, and even flooding change how radio waves travel. A dense network becomes a citywide weather instrument, spotting a microburst street by street instead of relying on a single distant weather radar.
+
+<Figure
+  id="2.3"
+  src="/images/module-02/img-2-3.png"
+  alt="Four ISAC use cases: detecting drones, monitoring road traffic, recognizing gestures and room presence, and sensing local weather conditions."
+/>
+
+<Callout variant="takeaway">
+  The pattern in all four is that the sensed thing carries no radio. That's the superpower — the world doesn't need to opt in with hardware.
+</Callout>
+
+</Lesson>
+
+<Lesson id="lesson-2-4" title="Lesson 2.4 — Why 5G Can't Do This (and What 3GPP Is Changing)">
+
+5G is a brilliant talker but a lousy watcher. Its waveforms, scheduling, and tower antennas were all optimized for one thing: moving bits to devices (UEs) that ask to be talked to. Sensing needs things 5G never planned for:
+
+- Waveform design: signals shaped to produce clean, measurable echoes — not just high data rates. (Little more explanation: Waveform design is the art of carefully sculpting and shaping the structure of a radio signal. The goal isn't just to pack it full of data, but to shape it so that when it bounces off an object, it creates a crisp, precise, and easily readable reflection (a clean, measurable echo).)
+- Full-duplex-ish listening: the tower-top antennas must hear faint echoes of their own transmission — like whispering and listening for your own echo at a rock concert. (Little more explanation: Full-duplex means a device can send out a signal and listen for a returning signal at the exact same time on the same frequency.)
+- New measurements & interfaces: 3GPP is defining how sensing data is requested, reported, and shared between network functions.
+- Privacy guardrails: standards work includes who may sense what, where, and with whose consent.
+
+Where it stands in the standards world: 3GPP began studying ISAC channel modeling in Release 19, and ISAC is a headline study area in Release 20 — the release that kicks off formal 6G study items — with the first 6G specifications targeted for Release 21, aligned to the ITU's IMT-2030 framework (commercial 6G around 2030).
+
+<Figure
+  id="2.4"
+  src="/images/module-02/img-2-4.png"
+  alt="Comparison of communication-focused 5G with 6G ISAC features including sensing waveforms, echo listening, sensing-data interfaces, and privacy controls."
+/>
+
+<SoundSmart
+  quote={"\"Watch the Release 20 study items — the ISAC channel model work from Rel-19 is graduating into architecture questions, and privacy is going to be the long pole in the tent.\""}
+  clue={"3GPP finished studying HOW radio waves bounce (Rel-19); now it's deciding how to build sensing into the network itself (Rel-20). The slowest, hardest part ('the long pole in the tent') will be agreeing on privacy rules — who is allowed to sense whom."}
+/>
+
+</Lesson>
+
+<AcronymDecoder
+  moduleNumber={2}
+  rows={[
+    {
+      acronym: "ISAC",
+      standsFor: "Integrated Sensing And Communication",
+      explanation: "The network does two jobs at once: it sends your data AND acts like radar, detecting objects around it. Like a lifeguard who also delivers snacks.",
+    },
+    {
+      acronym: "JCAS",
+      standsFor: "Joint Communication And Sensing",
+      explanation: "Another name for ISAC is used in research papers. Same idea, different label. Like 'soda' vs. 'pop.'",
+    },
+    {
+      acronym: "RCS",
+      standsFor: "Radar Cross Section",
+      explanation: "How 'visible' an object is to radio waves. A metal drone reflects a lot (big RCS); a bird reflects little (small RCS). Think of it as how shiny something looks to the network's radar eyes.",
+    },
+    {
+      acronym: "gNB",
+      standsFor: "next-generation NodeB (the base station)",
+      explanation: "The radio brain at the tower site. In 6G, it doesn't just talk to phones — it also senses its surroundings.",
+    },
+    {
+      acronym: "UE",
+      standsFor: "User Equipment",
+      explanation: "3GPP's fancy word for your phone (or any connected device).",
+    },
+    {
+      acronym: "LiDAR",
+      standsFor: "Light Detection And Ranging",
+      explanation: "Sensing with lasers instead of radio. Self-driving cars use it. ISAC does something similar, but with the radio waves already flying around.",
+    },
+    {
+      acronym: "Doppler (effect)",
+      standsFor: "Not an acronym — a physics effect",
+      explanation: "Waves bounced off a moving object shift in frequency. It's why an ambulance siren changes pitch as it passes you. ISAC uses this to measure speed. More explanation next.",
+    },
+    {
+      acronym: "6DoF",
+      standsFor: "Six Degrees of Freedom",
+      explanation: "Tracking position (x, y, z) plus rotation (pitch, yaw, roll). Full 3D awareness of where something is and which way it's facing.",
+    },
+  ]}
+/>
+
+<Lesson id="doppler-effect" title="Doppler Effect – the easy explanation">
+
+The Doppler effect in wireless transmission is the change in the frequency or pitch of a radio signal that happens when the transmitter and receiver are moving toward or away from each other. It is the exact same physics principle that makes a siren sound higher-pitched as an ambulance speeds toward you, and lower-pitched as it drives away. 
+
+### How It Works in Wireless
+
+- Moving Closer (Compression): If a cell tower and your phone are moving toward each other, the radio waves get squished together. This increases the frequency.
+- Moving Apart (Stretching): If they are moving away from each other, the waves get stretched out, which lowers the frequency. 
+
+### Why It Matters for Your Devices
+
+- Dropped Calls & Lag: This shifting frequency confuses your devices. The receiver expects the signal at an exact frequency, and if it shifts too much, it can cause data errors, dropped calls, or slower internet speeds.
+- High-Speed Travel: It is a major issue in high-speed trains or cars, where rapid movement creates a severe Doppler shift.
+
+### How Engineers Fix It
+
+Modern wireless networks (like 4G, 5G, and Wi-Fi) use advanced math and smart receiver designs to track and cancel out these shifts. The receiver constantly measures the device's speed and adjusts its tuning to perfectly match the incoming signal.
+
+</Lesson>
+
+<Quiz
+  questions={[
+    "1. In plain terms, what does ISAC let a cell tower do?",
+    "2. Why is a drone easier for ISAC to spot than a bird of the same size?",
+    "3. Which physics effect lets the network measure how FAST something is moving?",
+    "4. Name two things 5G towers CANNOT do that 6G ISAC towers can.",
+    "5. True or False: ISAC requires every sensed object to carry a SIM card.",
+  ]}
+  answers={[
+    "1. Send data AND detect objects (like radar) using the same radio signals.",
+    "2. The drone is metal, so it has a bigger radar cross section (RCS) — it reflects more radio energy.",
+    "3. The Doppler effect — reflected waves shift frequency when the object moves.",
+    "4. Detect non-connected objects (drones, cars, people) and measure the environment (rain, motion, gestures). 5G only communicates with devices that have radios.",
+    "5. False — that's the whole point. ISAC senses passive objects with no radio, no SIM, no battery.",
+  ]}
+/>
+
+<ModuleNav
+  position="bottom"
+  previous={{ label: "Back: Module 1 — Why 6G?", href: "/modules/1" }}
+  next={{ label: "Next: Module 3 — Immersive Worlds (XR & Holograms)", href: "/modules/3" }}
+/>

@@ -7,14 +7,15 @@ export type AcronymRow = {
 };
 
 type AcronymDecoderProps = {
+  moduleNumber: number;
   rows: AcronymRow[];
 };
 
-export function AcronymDecoder({ rows }: AcronymDecoderProps) {
+export function AcronymDecoder({ moduleNumber, rows }: AcronymDecoderProps) {
   return (
     <section id="acronym-decoder" className={styles.decoder} aria-labelledby="decoder-title">
       <p className={styles.eyebrow}>Keep this handy</p>
-      <h2 id="decoder-title">Acronym Decoder — Module 1</h2>
+      <h2 id="decoder-title">Acronym Decoder — Module {moduleNumber}</h2>
       <div className={styles.decoderTableWrap}>
         <table>
           <thead>

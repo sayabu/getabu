@@ -1,0 +1,191 @@
+<ModuleHeader
+  title="Module 3 — Immersive Worlds: XR, Holograms & the Internet of Senses"
+  meta="6G Fundamentals Tutorial |  Module 3 of 10  |  Estimated time: 35 minutes"
+/>
+
+<ModuleNav
+  position="top"
+  previous={{ label: "Module 2: The Network That Sees", href: "/modules/2" }}
+  current="Module 3"
+  next={{ label: "Module 4: Digital Twins & Ambient IoT", href: "/modules/4" }}
+  jumpLinks={[
+    { label: "Lesson 3.1", href: "#lesson-3-1" },
+    { label: "3.2", href: "#lesson-3-2" },
+    { label: "3.3", href: "#lesson-3-3" },
+    { label: "3.4", href: "#lesson-3-4" },
+    { label: "Acronym Decoder", href: "#acronym-decoder" },
+    { label: "Quiz", href: "#quiz" },
+  ]}
+/>
+
+<LearningObjectives
+  items={[
+    "What XR really covers — VR, AR, MR — and why the labels matter",
+    "Why is your inner ear the toughest customer any network has ever had",
+    "What holographic communication and the 'internet of senses' actually require",
+    "Why 5G gets you a demo, but 6G gets you a product",
+    "8 acronyms with easy explanations",
+  ]}
+/>
+
+<Lesson id="lesson-3-1" title="Lesson 3.1 — The XR Family: Three Flavors of Blended Reality">
+
+What are XR, VR, AR, and MR?
+
+The "R" in all of these acronyms stands for Reality.
+
+Here is the quick breakdown of what they mean:
+
+VR (Virtual Reality): You wear a headset that completely blocks out the real world and puts you inside a 100% digital, video-game-like world.
+
+AR (Augmented Reality): You look through a screen or glasses (like Pokémon GO or Snapchat filters) that overlay digital objects right on top of the real world.
+
+MR (Mixed Reality): An advanced mix of both, where digital objects don't just sit on top of your view but can actually interact with the real world (like a virtual ball bouncing off your physical bedroom wall).
+
+XR (Extended Reality): The catch-all umbrella term that covers all three of the technologies above (VR, AR, and MR).
+
+The device family ranges from bulky VR headsets to featherweight AR glasses. But this is the lemon twist: the lighter the glasses, the heavier the network's job. Small frames can't hold large batteries or hot chips, so rendering must happen elsewhere — at the network edge — and be streamed back instantly.
+
+<Figure
+  id="3.1"
+  src="/images/module-03/img-3-1.png"
+  alt="Comparison of VR, AR, and MR under the XR umbrella, from a fully virtual world to digital objects interacting with the real world, with rendering supported by the network edge."
+/>
+
+</Lesson>
+
+<Lesson id="lesson-3-2" title="Lesson 3.2 — Your Inner Ear: The World's Pickiest Customer">
+
+Your inner ear tracks your head's motion with ferocious precision. When you turn your head, your eyes expect the view to update within roughly 10–20 milliseconds — about one-tenth of an eye blink. Any slower and your brain declares 'poison!' and makes you nauseous. (Your brain’s motion-sickness alarm predates VR by a few million years.)
+
+This is why streaming a movie is easy, but streaming reality is brutal. A movie can buffer 30 seconds ahead — the network can be sloppy, and you'd never know. But nobody can buffer your head movements, because nobody knows where you'll look next. Every head turn is a live, unforgiving deadline.
+
+Two numbers matter here. 
+
+E2E latency (end-to-end latency) is the full round trip: head turns → sensors report → edge computer renders the new view → pixels arrive at your eyes. 
+
+Jitter is how much the delay wobbles. Weirdly, a steady 20 ms delay feels better than one that bounces between 5 and 30 ms. Your brain adapts to consistency but hates surprises. Great QoE (Quality of Experience) means low latency and low jitter.
+
+<Figure
+  id="3.2"
+  src="/images/module-03/img-3-2.png"
+  alt="End-to-end XR response loop from a head turn through sensors and edge rendering to updated pixels, emphasizing low latency and low jitter."
+/>
+
+<Callout variant="takeaway">
+  XR flips the network's job from 'move lots of data eventually' to 'move quite a lot of data RIGHT NOW, EVERY TIME.' Consistency (low jitter) matters as much as speed.
+</Callout>
+
+<SoundSmart
+  quote={"\"For XR, the tail latency is the product — average latency is a vanity metric if the 99th percentile makes users sick.\""}
+  clue={"It doesn't matter if the delay is usually great; if 1 in 100 frames arrives late, users still feel ill. Engineers therefore obsess over the worst cases ('tail,' '99th percentile') rather than the average."}
+/>
+
+</Lesson>
+
+<Lesson id="lesson-3-3" title="Lesson 3.3 — Holograms & the Internet of Senses">
+
+Video calls flattened us into rectangles. Holographic communication aims to put grandma in the room: a life-size, 3D, look-around-able presence. The data appetite is enormous: capturing a person volumetrically (from all angles, in depth) can require hundreds of times as much data as HD video. Clever compression and AI-based reconstruction (send a sketch, let AI at the far end fill in the details) bring it down to something a 6G link can carry.
+
+Beyond sight and sound, 6G research talks about the internet of senses: transmitting touch (haptics — a surgeon feeling tissue resistance through a robot), precise motion (6DoF pose — position plus orientation, covered in Module 2's decoder), and eventually multi-sensory streams. Touch is the brutal one: your fingertips notice delays even smaller than your eyes do, which is why remote surgery and remote machinery are flagship 'hyper-reliable, low-latency' use cases in the IMT-2030 vision (Module 1).
+
+<Figure
+  id="3.3"
+  src="/images/module-03/img-3-3.png"
+  alt="Holographic communication and the internet of senses carrying a three-dimensional person, touch feedback, and precise motion through a 6G connection."
+/>
+
+</Lesson>
+
+<Lesson id="lesson-3-4" title="Lesson 3.4 — Why 5G Gets a Demo and 6G Gets a Product">
+
+5G can absolutely run impressive XR demos — in a lab, near a tower, with few users. The problems appear at scale:
+
+- Capacity per area: one XR user is fine; a stadium of them saturates 5G cells. 6G's new spectrum (Module 5) and smarter antennas (Module 6) multiply capacity.
+- Guaranteed latency: 5G's low latency is 'usually'; XR needs 'always.' 6G designs treat deadline-keeping as a first-class KPI, not a nice average.
+- Uplink matters now: networks were built assuming you mostly download. XR glasses constantly UPLOAD sensor and camera data. 6G rebalances the design.
+- AI in the loop: predicting where you'll look, pre-rendering, and compressing with AI (Module 7) is baked into 6G thinking, not bolted on.
+
+3GPP has been grooming this path: Rel-18/19 ('5G-Advanced') added XR-awareness features — the network learns to recognize XR traffic and protect its deadlines. Rel-20/21 6G work aims to make immersive communication a headline scenario, exactly as the IMT-2030 hexagon promises.
+
+<Figure
+  id="3.4"
+  src="/images/module-03/img-3-4.png"
+  alt="Comparison showing how 5G supports limited XR demonstrations while 6G adds capacity, guaranteed latency, stronger uplink support, and AI-assisted rendering for products at scale."
+/>
+
+<SoundSmart
+  quote={"\"Rel-18's XR awareness was about protecting XR flows inside 5G; the 6G question is whether the air interface itself is designed around pose-to-render loops.\""}
+  clue={"5G-Advanced taught the network to recognize and prioritize XR traffic. 6G goes further: designing the radio itself around the head-turn-to-new-image cycle, instead of retrofitting."}
+/>
+
+</Lesson>
+
+<AcronymDecoder
+  moduleNumber={3}
+  rows={[
+    {
+      acronym: "XR",
+      standsFor: "Extended Reality",
+      explanation: "The umbrella term covering VR, AR, and MR — any tech that blends digital content with what you see.",
+    },
+    {
+      acronym: "VR",
+      standsFor: "Virtual Reality",
+      explanation: "Fully digital world. Put on the headset, and your living room disappears, and you're on Mars.",
+    },
+    {
+      acronym: "AR",
+      standsFor: "Augmented Reality",
+      explanation: "Digital layers on the real world — like navigation arrows painted on the actual street through your glasses.",
+    },
+    {
+      acronym: "MR",
+      standsFor: "Mixed Reality",
+      explanation: "AR's ambitious sibling: digital objects that interact with real ones — a virtual ball that bounces off your real table.",
+    },
+    {
+      acronym: "HMD",
+      standsFor: "Head-Mounted Display",
+      explanation: "The headset or smart glasses themselves. The lighter they get, the more network work must move off the device.",
+    },
+    {
+      acronym: "QoE",
+      standsFor: "Quality of Experience",
+      explanation: "How good it feels to the human — smooth, sharp, no nausea. Different from raw speed: a fast network can still deliver a queasy experience.",
+    },
+    {
+      acronym: "E2E latency",
+      standsFor: "End-to-End latency",
+      explanation: "The total delay from your action (turning your head) to the result (the view updating). The full round trip, not just one leg.",
+    },
+    {
+      acronym: "Haptics",
+      standsFor: "Not an acronym — touch feedback",
+      explanation: "Technology that lets you FEEL digital things: vibration, pressure, texture. The 'sense of touch' channel of communication.",
+    },
+  ]}
+/>
+
+<Quiz
+  questions={[
+    "1. What's the difference between VR, AR, and MR — in one phrase each?",
+    "2. Why does turning your head create a harder network problem than watching a movie?",
+    "3. Why do lightweight AR glasses NEED a powerful network?",
+    "4. What is 'jitter,' and why is it sometimes worse than plain slowness?",
+    "5. Name two 'new senses' 6G aims to carry beyond sight and sound.",
+  ]}
+  answers={[
+    "1. VR: a fully digital world. AR: digital layer on reality. MR: digital objects that interact with real ones.",
+    "2. A movie can buffer ahead; head motion can't be predicted and buffered — the view must update within ~10–20 ms, or you feel motion sickness.",
+    "3. Small glasses can't carry big batteries or hot processors, so heavy rendering moves to the edge/cloud — which only works if the network round trip is extremely fast and steady.",
+    "4. Jitter is a variation in delay. Humans adapt to steady, small delays but get sick or frustrated when delays bounce around unpredictably.",
+    "5. Touch (haptics) and — in research labs — even smell/multi-sensory streams; more practically: precise motion/pose (6DoF) as a first-class data stream.",
+  ]}
+/>
+
+<ModuleNav
+  position="bottom"
+  previous={{ label: "Back: Module 2 — The Network That Sees", href: "/modules/2" }}
+  next={{ label: "Next: Module 4 — Digital Twins & Ambient IoT", href: "/modules/4" }}
+/>

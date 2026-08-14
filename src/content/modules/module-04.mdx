@@ -1,0 +1,172 @@
+<ModuleHeader
+  title="Module 4 — Digital Twins & Ambient IoT: When Everything Gets a Voice"
+  meta="6G Fundamentals Tutorial | Module 4 of 10  |  Estimated time: 35 minutes"
+/>
+
+<ModuleNav
+  position="top"
+  previous={{ label: "Module 3: Immersive Worlds", href: "/modules/3" }}
+  current="Module 4"
+  next={{ label: "Module 5: Spectrum", href: "/modules/5" }}
+  jumpLinks={[
+    { label: "Lesson 4.1", href: "#lesson-4-1" },
+    { label: "4.2", href: "#lesson-4-2" },
+    { label: "4.3", href: "#lesson-4-3" },
+    { label: "4.4", href: "#lesson-4-4" },
+    { label: "Acronym Decoder", href: "#acronym-decoder" },
+    { label: "Quiz", href: "#quiz" },
+  ]}
+/>
+
+<LearningObjectives
+  items={[
+    "What a digital twin really is (hint: SimCity, but the city is real)",
+    "Why twins live or die by network freshness, not just computing power",
+    "Ambient IoT: how a tag with no battery can still talk to the network",
+    "The two connection styles 6G must master: massive crowds (mMTC) and mission-critical communications (HRLLC)",
+    "8 acronyms with easy explanations",
+  ]}
+/>
+
+<Lesson id="lesson-4-1" title="Lesson 4.1 — Digital Twins: SimCity, but the City Is Real">
+
+Remember SimCity — build a city, try things, and if traffic melts down, no real commuters suffer? A digital twin is the concept aimed at reality: a live virtual replica of a factory, a port, a power grid, or an entire downtown, continuously fed by real sensors. The magic word is live. A 3D model is a photograph; a digital twin is a video call with reality.
+
+What twins are for: trying dangerous or expensive things safely. Reroute a city's traffic lights virtually before touching the real ones. Stress-test a factory line at double speed. Watch a virtual bridge accumulate strain and schedule repairs before the real one cracks. The twin absorbs the mistakes, so reality doesn't have to.
+
+<Figure
+  id="4.1"
+  src="/images/module-04/img-4-1.png"
+  alt="A real city and factory continuously sending sensor updates to live digital twins where traffic, machinery, and infrastructure changes can be tested safely."
+/>
+
+</Lesson>
+
+<Lesson id="lesson-4-2" title="Lesson 4.2 — Freshness: Why the Network Makes or Breaks the Twin">
+
+A twin's only real currency is trust, and trust requires freshness. If the virtual factory shows a robot arm at position A while the real arm has moved to position B, decisions based on the twin are, in effect, decisions based on fiction. Engineers even have a metric for this — the age of information: not 'how fast can data travel' but 'how stale is my current picture of reality?'
+
+That means the network's job isn't just speed — it's keeping thousands of tiny update streams flowing without gaps, prioritizing the updates that matter (the overheating motor) over the ones that don't (the thermostat in a stable room). This blends everything you've met so far: sensing (Module 2) feeds the twin, and reliable low-latency links carry the critical updates.
+
+<Callout variant="takeaway">
+  A digital twin is only as good as its freshest data. The network's real deliverable isn't bandwidth — it's an up-to-date picture of reality.
+</Callout>
+
+<SoundSmart
+  quote={"\"For twins, I care less about throughput and more about age-of-information guarantees on the critical sensor streams.\""}
+  clue={"Raw speed isn't the point; what matters is a promise that the important sensors' latest readings are never more than a few moments old."}
+/>
+
+</Lesson>
+
+<Lesson id="lesson-4-3" title="Lesson 4.3 — Ambient IoT: The Battery-Free Crowd">
+
+Here's the problem with connecting everything: batteries. Ten billion battery-powered sensors mean ten billion battery replacements — an ecological and logistical nightmare. Enter Ambient IoT (A-IoT): tags so frugal they live off ‘scavenged’ energy — harvesting power from radio waves, light, heat, or vibration, like a solar calculator that never asks for anything.
+
+How can they transmit without a power source? Mostly they don't — they use backscatter: reflecting radio waves that already fill the air (from tower antennas or phones) and subtly modulating the reflection to encode data. It's the difference between owning a flashlight and signaling with a pocket mirror using someone else's sunshine. Your store's anti-theft RFID tag is the primitive ancestor; A-IoT extends the idea to longer ranges and full network integration — 3GPP began standardizing Ambient IoT in Release 19, with 6G expanding it.
+
+What it unlocks: every package in a supply chain reporting its location and temperature; every garment telling the recycling plant what it's made of; every pallet, tool, and crate findable instantly. Logistics people get visibly emotional about this.
+
+<Figure
+  id="4.3"
+  src="/images/module-04/img-4-3.png"
+  alt="Battery-free Ambient IoT tags harvesting energy and using backscatter to report information about individual packages, garments, tools, and pallets."
+/>
+
+</Lesson>
+
+<Lesson id="lesson-4-4" title="Lesson 4.4 — Two Very Different Conversations: mMTC vs. HRLLC">
+
+6G must master two opposite connection styles, and confusing them is a classic rookie mistake:
+
+- mMTC (massive Machine-Type Communication) is a stadium crowd doing the wave: enormous numbers of devices, each saying almost nothing ('still here, 4 degrees'), rarely. The challenge is scale and efficiency, not speed.
+- HRLLC (Hyper-Reliable Low-Latency Communication) is an air-traffic controller's radio: few messages, but each must arrive instantly and essentially always. This is 6G's upgrade of 5G's URLLC — the extra dependability that remote surgery, power-grid protection, and factory robots demand.
+
+A digital twin typically needs both: an mMTC swarm of humble sensors painting the background picture, plus a few HRLLC lifelines for the moments when the twin must slam the brakes on a real machine right now.
+
+<Figure
+  id="4.4"
+  src="/images/module-04/img-4-4.png"
+  alt="A digital twin combining a large mMTC crowd of simple sensor updates with a small number of urgent, highly reliable HRLLC control messages."
+/>
+
+<SoundSmart
+  quote={"\"Ambient IoT finally gives us a device class below NB-IoT — backscatter tags change the economics of tracking at the item level, not the pallet level.\""}
+  clue={"Until now, even the cheapest connected sensors cost too much to put on every individual item. Battery-free reflected-signal tags are cheap enough to tag each item, not just each crate. NB-IoT stands for Narrowband Internet of Things. Think of it as a special, super-low-energy cellular network designed for everyday objects rather than humans. NB-IoT gives these devices a slow but incredibly reliable path to the internet, allowing their batteries to last for up to 10 years without needing a charge."}
+/>
+
+</Lesson>
+
+<AcronymDecoder
+  moduleNumber={4}
+  rows={[
+    {
+      acronym: "DT",
+      standsFor: "Digital Twin",
+      explanation: "A live virtual copy of a real thing (a factory, a city block, a jet engine) that updates in real time and can run 'what-if' experiments safely.",
+    },
+    {
+      acronym: "A-IoT",
+      standsFor: "Ambient IoT",
+      explanation: "Tags and sensors so cheap and low-power they need NO battery — they harvest energy from radio waves or light, like a solar calculator's tiny cousin.",
+    },
+    {
+      acronym: "NB-IoT",
+      standsFor: "Narrowband Internet of Things",
+      explanation: "Think of it as a special, super-low-energy cellular network designed for everyday objects rather than humans. NB-IoT gives these devices a slow but incredibly reliable path to the internet, allowing their batteries to last for up to 10 years without needing a charge.",
+    },
+    {
+      acronym: "mMTC",
+      standsFor: "massive Machine-Type Communication",
+      explanation: "The art of connecting an enormous crowd of simple devices that each say very little, very rarely — quantity over chattiness.",
+    },
+    {
+      acronym: "HRLLC",
+      standsFor: "Hyper-Reliable Low-Latency Communication",
+      explanation: "6G's upgrade of 5G's URLLC: messages that arrive fast AND essentially always — for robots, grids, and surgery, 'almost always' isn't good enough.",
+    },
+    {
+      acronym: "RFID",
+      standsFor: "Radio-Frequency Identification",
+      explanation: "Today's battery-free tags (like anti-theft tags in stores). Ambient IoT is RFID's ambitious grandchild: longer-range, smarter, and network-connected.",
+    },
+    {
+      acronym: "Backscatter",
+      standsFor: "Not an acronym — a technique",
+      explanation: "Instead of transmitting its own signal, a tag reflects and subtly modifies radio waves already in the air — like signaling with a mirror instead of owning a flashlight.",
+    },
+    {
+      acronym: "URLLC",
+      standsFor: "Ultra-Reliable Low-Latency Communication",
+      explanation: "5G's version of the dependable-and-fast promise. HRLLC is 6G, raising the bar.",
+    },
+    {
+      acronym: "CPS",
+      standsFor: "Cyber-Physical System",
+      explanation: "Any setup where computers sense and control real-world machinery — the umbrella concept digital twins live under.",
+    },
+  ]}
+/>
+
+<Quiz
+  questions={[
+    "1. What makes a digital twin different from an ordinary 3D model or simulation?",
+    "2. Why is the network the make-or-break ingredient for a useful digital twin?",
+    "3. How can an Ambient IoT tag communicate without a battery?",
+    "4. What does mMTC optimize for, in plain terms?",
+    "5. What does the extra 'H' in HRLLC buy compared to 5G's URLLC?",
+  ]}
+  answers={[
+    "1. It's continuously synchronized with the real thing via live sensor data — it mirrors reality now, not a snapshot.",
+    "2. A twin is only as trustworthy as it is fresh; stale or lost sensor updates mean decisions get made on outdated reality.",
+    "3. It harvests energy from ambient radio waves/light and uses backscatter — reflecting and modifying existing signals instead of generating its own.",
+    "4. Connecting huge numbers of simple devices that each send tiny, infrequent messages — crowd size over conversation depth.",
+    "5. A step-change in dependability — pushing reliability and deadline guarantees high enough for things like remote surgery and grid control.",
+  ]}
+/>
+
+<ModuleNav
+  position="bottom"
+  previous={{ label: "Back: Module 3 — Immersive Worlds", href: "/modules/3" }}
+  next={{ label: "Next: Module 5 — Spectrum: The New Real Estate", href: "/modules/5" }}
+/>
