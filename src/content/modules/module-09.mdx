@@ -1,0 +1,75 @@
+<ModuleHeader title="Module 9 — Trust, Energy & Sustainability: The Grown-Up Goals" meta="6G Fundamentals Tutorial  |  Module 9 of 10  |  Estimated time: 30 minutes" />
+
+<ModuleNav position="top" previous={{ label: "Module 8: Architecture, Core & Satellites", href: "/modules/8" }} current="Module 9" next={{ label: "Module 10: The 5G vs 6G Showdown", href: "/modules/10" }} jumpLinks={[
+  { label: "Lesson 9.1", href: "#lesson-9-1" }, { label: "9.2", href: "#lesson-9-2" }, { label: "9.3", href: "#lesson-9-3" }, { label: "Acronym Decoder", href: "#acronym-decoder" }, { label: "Quiz", href: "#quiz" },
+]} />
+
+<LearningObjectives items={[
+  "Why quantum computers threaten today's encryption — and how PQC fixes locks early",
+  "Zero-trust: the end of the castle-and-moat security mindset",
+  "Why energy efficiency became a headline 6G KPI, and the tricks that deliver it",
+  "Resilience: designing networks that bend in disasters instead of breaking",
+  "8 acronyms (and key terms) with easy explanations",
+]} />
+
+<Lesson id="lesson-9-1" title="Lesson 9.1 — Security: New Locks Before the Master Key Exists">
+
+Security today relies on complex math that standard computers can't crack. But future quantum supercomputers will solve those math problems easily, acting like a master key for current encryption. The scary part is "harvest now, decrypt later": hackers can record (or harvest) your private data today and unlock it years from now when quantum tech arrives. If secrets need to stay hidden for a decade, you need quantum-proof encryption right away (even before quantum computers are mainstream!).
+
+The solution is Post-Quantum Cryptography (PQC). These are brand-new mathematical locks designed to stop quantum computers, which NIST (National Institute of Standards and Technology) officially standardized in 2024 to update modern software. Because 6G networks are being built alongside this upgrade, 6G will be the first wireless generation to have built-in quantum protection from day one.
+
+The second shift is philosophical: Zero-Trust Architecture (ZTA). Old networks were castles — hard wall, trusted interior. But modern networks are clouds of software from many vendors (Module 8), running in many places, with satellites and edge sites everywhere; there is no 'interior' anymore. Zero trust replaces the moat with a simple rule: nobody is trusted by default — every function, device, and admin continuously proves identity and authorization, like a building where every single door checks your badge, forever.
+
+<Figure id="9.1" src="/images/module-09/img-9-1.png" alt="Post-quantum locks protecting harvested data from a future quantum master key alongside a zero-trust building where every door continuously checks identity." />
+
+<SoundSmart quote={`"The PQC migration is a now problem, not a quantum-era problem — harvest-now-decrypt-later means long-lived secrets are already exposed."  `} clue={`Don't wait for quantum computers to exist: data recorded today can be cracked later. Anything that must stay secret for years needs the new quantum-safe encryption immediately.`} />
+
+</Lesson>
+
+<Lesson id="lesson-9-2" title="Lesson 9.2 — Energy: The Network Goes on a Smart Diet">
+
+Mobile networks consume real electricity — the RAN alone typically accounts for the majority of a carrier's energy bill — and every generation has carried more traffic than the last. 6G makes a promise no previous generation dared: carry far more, consume less. That's why IMT-2030 (Module 1) elevates sustainability from footnote to design goal, and why energy efficiency joins speed and latency as a first-class KPI.
+
+How does a network diet without starving users? Mostly by not burning energy on nobody:
+
+- Sleep modes at every scale: radios take micro-naps between transmissions (microseconds), shut down capacity layers at 3 a.m., and wake instantly when needed — a network that dozes like a cat, always ready to pounce.
+- AI rightsizing (Module 7's day job): predicting traffic hour by hour and matching active capacity to actual need — with the digital twin verifying no user gets hurt.
+- Better hardware: more efficient power amplifiers (historically the RAN's hungriest component) and modern silicon replacing legacy gear.
+- Design honesty: 6G candidate features are increasingly evaluated in 3GPP with energy as an explicit criterion. A feature that wins throughput but wrecks EE (energy efficiency) will have a harder path to adoption by 3GPP.
+
+<Figure id="9.2" src="/images/module-09/img-9-2.png" alt="A mobile network on a smart energy diet using radio sleep modes, AI traffic rightsizing, efficient amplifiers, and energy-efficiency scoring." />
+
+<Callout variant="takeaway">6G's energy story is mostly about eliminating waste: idle radios sleeping, capacity matched to demand by AI, and efficiency graded as strictly as speed.</Callout>
+
+</Lesson>
+
+<Lesson id="lesson-9-3" title="Lesson 9.3 — Resilience: Bend, Don't Break">
+
+Security asks 'can attackers break in?'; resilience asks a broader question: 'when anything goes wrong — hurricane, fiber cut, grid blackout, software bug — does service survive?' As networks became society's nervous system (payments, 911, hospitals, logistics), resilience graduated into a design requirement, explicitly named in the IMT-2030 vision alongside security.
+
+The 6G resilience toolkit assembles pieces you've already met: satellite fallback when ground infrastructure fails (Module 8's NTN), sidelink letting devices relay for each other when towers are down, graceful degradation (emergency calls and critical services keep working even when capacity collapses), and AI-assisted self-healing that reroutes around failures in seconds. The design philosophy in one phrase: a palm tree, not an oak — built to bend through the storm and stand back up.
+
+<Figure id="9.3" src="/images/module-09/img-9-3.png" alt="A resilient 6G network bending through a storm by combining satellite fallback, device relays, graceful degradation, and AI-assisted rerouting." />
+
+<SoundSmart quote={`"Resilience KPIs are joining the spec conversation — graceful degradation paths need to be designed, not improvised during the outage."`} clue={`6G planning includes measurable targets for surviving failures. Which services stay alive when things break must be decided in the design phase — not figured out mid-disaster.`} />
+
+</Lesson>
+
+<AcronymDecoder moduleNumber={9} rows={[
+  { acronym: "PQC", standsFor: "Post-Quantum Cryptography", explanation: "New encryption math designed so that even future quantum computers can't crack it. The locks are upgraded before the master key is created." },
+  { acronym: "ZTA", standsFor: "Zero-Trust Architecture", explanation: "A security philosophy: trust nothing by default — every user, device, and network function must continuously prove itself, even 'inside' the network." },
+  { acronym: "EE", standsFor: "Energy Efficiency", explanation: "Useful work delivered per unit of energy — in 6G, promoted from a nice-to-have into a headline KPI alongside speed and latency." },
+  { acronym: "KPI", standsFor: "Key Performance Indicator", explanation: "A measurable target (Module 1). The 6G twist: energy, resilience, and coverage join speed and delay on the official scoreboard." },
+  { acronym: "Resilience", standsFor: "Not an acronym — a design goal", explanation: "The network's ability to keep working (or degrade gracefully) through disasters, attacks, and failures — bending without breaking." },
+  { acronym: "'Harvest now, decrypt later'", standsFor: "Not an acronym — a threat", explanation: "Adversaries recording today's encrypted traffic to decrypt years from now once quantum computers mature. The reason PQC can't wait." },
+  { acronym: "Sleep modes", standsFor: "Not an acronym — an energy technique", explanation: "Radios napping in the microseconds and hours when nobody needs them — from micro-naps between transmissions to shutting layers overnight." },
+  { acronym: "Scope 1/2/3", standsFor: "Emissions accounting categories", explanation: "How organizations count carbon: their own fuel (1), purchased electricity (2), and their supply chain (3). Network energy is mostly found in Scope 2." },
+]} />
+
+<Quiz questions={[
+  "1. Why upgrade to post-quantum cryptography before large quantum computers exist?", "2. Summarize zero-trust in one sentence.", "3. Why does 6G treat energy efficiency as a headline KPI rather than an afterthought?", "4. Give two techniques networks use to cut energy without hurting users.", "5. How does resilience differ from security?",
+]} answers={[
+  "1. Because of 'harvest now, decrypt later': traffic recorded today could be decrypted once quantum computers mature — long-lived secrets need protection now.", "2. Never trust by default — continuously verify every user, device, and network function, even those already 'inside.'", "3. Networks' energy bills and carbon footprints are large and growing with traffic; 6G must deliver more capacity while using less energy — so EE is designed in from the start.", "4. Radio sleep modes (micro to deep), AI-driven capacity right-sizing by hour, more efficient hardware (e.g., better amplifiers), and site modernization — any two.", "5. Security defends against attackers; resilience keeps service alive through ANY disruption — storms, fiber cuts, power loss — by design (redundancy, graceful degradation, satellite fallback).",
+]} />
+
+<ModuleNav position="bottom" previous={{ label: "Back: Module 8 — Architecture, Core & Satellites", href: "/modules/8" }} next={{ label: "Next: Module 10 — The 5G vs 6G Showdown & The Road Ahead", href: "/modules/10" }} />

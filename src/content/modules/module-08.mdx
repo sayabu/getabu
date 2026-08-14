@@ -1,0 +1,86 @@
+<ModuleHeader title="Module 8 — Architecture: Cloud Cores, Open Radios & Cell Towers in the Sky" meta="6G Fundamentals Tutorial  |  Module 8 of 10  |  Estimated time: 35 minutes" />
+
+<ModuleNav position="top" previous={{ label: "Module 7: AI-Native Networks", href: "/modules/7" }} current="Module 8" next={{ label: "Module 9: Trust, Energy & Sustainability", href: "/modules/9" }} jumpLinks={[
+  { label: "Lesson 8.1", href: "#lesson-8-1" }, { label: "8.2", href: "#lesson-8-2" }, { label: "8.3", href: "#lesson-8-3" }, { label: "8.4", href: "#lesson-8-4" }, { label: "Acronym Decoder", href: "#acronym-decoder" }, { label: "Quiz", href: "#quiz" },
+]} />
+
+<LearningObjectives items={[
+  "The two halves of every mobile network: the storefront (RAN) and headquarters (core)",
+  "Why cores became cloud software (SBA) and what 6G simplifies further",
+  "Edge computing (MEC): moving the kitchen closer to the diners",
+  "O-RAN and the CU/DU/RU split — then up to space: NTN and satellite direct-to-phone",
+  "8 acronyms with easy explanations",
+]} />
+
+<Lesson id="lesson-8-1" title="Lesson 8.1 — Storefront and Headquarters: RAN Meets Core">
+
+Everything so far — antennas, beams, spectrum — lives in the RAN, the storefront where your device does business with the network. Behind it sits the core: headquarters. When your phone connects, the core checks who you are (authentication), what you're entitled to (your plan and policies), sets up your session, and routes you to the internet (i.e., it routes traffic to whatever target data network you are trying to reach). You never see it, exactly like you never see a store chain's HQ — but nothing works without it.
+
+Modern cores are pure software built as a Service-Based Architecture (SBA): dozens of small services (one verifies identity, one manages sessions, one, the NWDAF from Module 7, does analytics) that call each other over standard interfaces.
+
+NWDAF, as you may remember, is the Network Data Analytics Function. It is like the smart "brain" of a 5G or 6G cellular core network that constantly collects data on how the network is performing. It uses this data to predict future traffic spikes or slowdowns, helping the network automatically fix issues and run much more smoothly.
+
+LEGO bricks, not a welded appliance. The 6G core discussion is about going further: fewer, simpler bricks, cloud-native from birth, and AI woven.
+
+<Figure id="8.1" src="/images/module-08/img-8-1.png" alt="A mobile network shown as a RAN storefront connected to a cloud-software core headquarters made of small service-based LEGO-like functions." />
+
+</Lesson>
+
+<Lesson id="lesson-8-2" title="Lesson 8.2 — MEC: Move the Kitchen Closer to the Diners">
+
+Physics has one non-negotiable rule: light takes time to travel. A round trip to a data center 1,500 km away burns ~15 milliseconds on travel alone — Module 3's XR budget, gone before any work happens. The fix is Multi-access Edge Computing (MEC): placing computing at or near tower sites and local hubs, so time-critical work happens around the corner.
+
+The analogy: a restaurant chain with one national kitchen makes cold food; opening neighborhood kitchens means hot plates in minutes. Edge kitchens serve XR rendering (Module 3), digital-twin control loops (Module 4), and AI inference (Module 7: remember, train centrally, infer locally). MEC is the quiet enabler stitched through every 6G use case.
+
+<Callout variant="takeaway">Latency has a speed-of-light floor that no protocol can negotiate away. The only fix is geography: bring the computing to the user. That's MEC.</Callout>
+
+</Lesson>
+
+<Lesson id="lesson-8-3" title="Lesson 8.3 — Opening the Box: O-RAN and the CU/DU/RU Split">
+
+Radio sites used to be one-vendor appliances: sealed boxes, one brand top to bottom. If Ericsson was the manufacturing vendor, then we would have all Ericsson gear; no mix and matching with Nokia or Samsung.
+
+O-RAN is the industry movement to standardize the internal interfaces of the radio network, so an operator (like AT&T, T-Mobile, or Verizon) can mix vendors.  Open sockets instead of proprietary plugs. It's also where the RIC (Module 7's radio 'brain room') comes from. (Remember, RIC is the RAN Intelligent Controller, the 'brain room' where AI apps observe the radio network and issue optimization instructions.
+
+Alongside openness came a functional split of the radio site's brain: the RU (Radio Unit) handles the antenna-side radio itself; the DU (Distributed Unit) does the microsecond-deadline processing and must stay close; the CU (Central Unit) handles less time-critical functions and can sit farther away, pooled in an edge data center — conveniently, often the same building as MEC.
+
+Let me unpack what I mean by: “an edge data center — conveniently, often the same building as MEC.” MEC (Multi-access Edge Computing) is essentially a mini data center placed close to users so apps, like online games, can load almost instantly without data traveling far away. The sentence means that the network's brain unit (the CU) and this mini data center are often placed in the same physical building to save space and make communication between them even faster.
+
+For 6G, expect this cloud-native, disaggregated style to be the default assumption, not the innovation.
+
+<Figure id="8.3" src="/images/module-08/img-8-3.png" alt="An open radio site split into RU at the antenna, nearby DU for time-critical processing, and pooled CU beside MEC in an edge data center." />
+
+<SoundSmart heading="🎤 SOUND SMART IN A MEETING (WITHOUT UNNECESSARY POSTURING)" quote={`"The interesting 6G architecture debate is how much of the DU migrates to the cloud — fronthaul economics and AI acceleration are pulling in opposite directions."  `} clue={`Engineers argue about where the time-critical radio processing should physically live: pooling it in data centers saves money, but the strict timing of the link to the antennas ('fronthaul') and the need for AI chips near the radio push it back toward the tower.`} />
+
+</Lesson>
+
+<Lesson id="lesson-8-4" title="Lesson 8.4 — NTN: Cell Towers in the Sky">
+
+Roughly 10% of the planet's land has cell coverage worth bragging about; oceans, deserts, mountains, and disaster zones have little or none. 6G's answer is the Non-Terrestrial Network (NTN): satellites (and high-altitude platforms) as a coverage layer designed into the system. 3GPP added NTN support in Rel-17 and has expanded it since — including direct-to-phone satellite messaging that ordinary smartphones already use today via partnerships between carriers and satellite constellations.
+
+Orbit matters. LEO (Low Earth Orbit) satellites fly a few hundred km up, close enough for phone-friendly delays, but each covers a small, fast-moving footprint, so you need swarms of them (constellations). GEO (Geostationary Orbit) parks ~35,786 km up — one satellite sees a third of Earth, but the round trip adds noticeable lag. GEO satellites match the Earth's rotation, making them appear completely still relative to the ground; unlike LEO satellites, which race across the sky at around 27,359 km/h or 17,000 mph relative to the Earth to stay in orbit.
+
+The 6G vision is a 3D network: ground towers, aerial platforms, and satellite layers presented to your phone as one seamless service — hiking off-grid, your phone drifts from tower to satellite and back without you noticing. Add sidelink (D2D) - devices talking directly to each other when infrastructure is absent - and 'no signal' starts becoming a historical phrase. While traditional cellular communication follows an Uplink (Device  Base Station) and Downlink (Base Station  Device) model, Sidelink creates a direct link (Device  Device).
+
+<Figure id="8.4" src="/images/module-08/img-8-4.png" alt="A seamless 3D network joining ground towers, aerial platforms, LEO and GEO satellites, and direct device-to-device sidelinks across remote terrain." />
+
+</Lesson>
+
+<AcronymDecoder moduleNumber={8} rows={[
+  { acronym: "Core", standsFor: "Not an acronym — the core network", explanation: "The network's back office: it authenticates you, manages your session, applies your plan, and connects you to the internet. The RAN is the storefront; the core is headquarters." },
+  { acronym: "SBA", standsFor: "Service-Based Architecture", explanation: "Building the core as a collection of small software services that call each other over standard interfaces — LEGO bricks instead of one welded machine." },
+  { acronym: "MEC", standsFor: "Multi-access Edge Computing", explanation: "Putting computing power close to users (at or near tower sites) so time-critical work — like XR rendering — doesn't trek to a distant data center." },
+  { acronym: "O-RAN", standsFor: "Open Radio Access Network", explanation: "An industry push to standardize the interfaces INSIDE the radio network so parts from different vendors mix and match — open sockets instead of one-brand appliances." },
+  { acronym: "CU / DU / RU", standsFor: "Central Unit / Distributed Unit / Radio Unit", explanation: "The radio site's brain split into three: RU (the antenna-side radio), DU (fast real-time processing nearby), CU (higher functions, can sit farther away, even in a datacenter." },
+  { acronym: "NTN", standsFor: "Non-Terrestrial Network", explanation: "Any network segment that isn't on the ground: satellites, high-altitude platforms, drones — 3GPP's official term for coverage from above." },
+  { acronym: "LEO / MEO / GEO", standsFor: "Low / Medium / Geostationary Earth Orbit", explanation: "Satellite altitudes: LEO (a few hundred km — close, fast, but you need swarms), MEO (middle), GEO (~36,000 km — one satellite sees a third of Earth, but delay is high)." },
+  { acronym: "D2D / sidelink", standsFor: "Device-to-Device (sidelink)", explanation: "Phones and devices talking directly to each other without going through a tower — useful for cars, wearables, and disaster scenarios." },
+]} />
+
+<Quiz questions={[
+  "1. Using the storefront/headquarters analogy, what do the RAN and core each do?", "2. Why did cores move to a Service-Based Architecture?", "3. Why does XR need MEC rather than distant cloud data centers?", "4. Why do LEO constellations need thousands of satellites while GEO needs few?", "5. What's the 6G ambition for NTN compared with 5G's version?",
+]} answers={[
+  "1. RAN (storefront): handles the radio conversation with your device. Core (headquarters): authenticates you, manages sessions and policies, connects you onward.", "2. Small independent services can be updated, scaled, and mixed per need — like LEGO — instead of replacing one giant welded box.", "3. Physics: light takes too long to travel far; edge computing near the user keeps round trips inside XR's brutal latency budget.", "4. LEO satellites are close (low delay) but each sees a small, fast-moving footprint — continuous coverage requires a swarm; one GEO satellite parks over a third of the Earth but adds much more delay.", "5. 5G added satellite support as an extension; 6G aims for one seamless 3D network where terrestrial and satellite layers are designed together and devices roam between them invisibly.",
+]} />
+
+<ModuleNav position="bottom" previous={{ label: "Back: Module 7 — AI-Native Networks", href: "/modules/7" }} next={{ label: "Next: Module 9 — Trust, Energy & Sustainability", href: "/modules/9" }} />

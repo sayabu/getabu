@@ -1,0 +1,133 @@
+<ModuleHeader title="Module 6 — The Radio Magic: Giga-MIMO, Beamforming & Smart Surfaces" meta="6G Fundamentals Tutorial  |  Module 6 of 10  |  Estimated time: 35 minutes" />
+
+<ModuleNav position="top" previous={{ label: "Module 5: Spectrum", href: "/modules/5" }} current="Module 6" next={{ label: "Module 7: AI-Native Networks", href: "/modules/7" }} jumpLinks={[
+  { label: "Lesson 6.1", href: "#lesson-6-1" }, { label: "6.2", href: "#lesson-6-2" }, { label: "6.3", href: "#lesson-6-3" }, { label: "6.4", href: "#lesson-6-4" }, { label: "Acronym Decoder", href: "#acronym-decoder" }, { label: "Quiz", href: "#quiz" },
+]} />
+
+<LearningObjectives items={[
+  "Beamforming: how many small antennas become one steerable spotlight",
+  "From Massive MIMO (5G) to Giga-MIMO (6G) — and why FR3 makes it possible",
+  "RIS: sticker-thin 'smart mirrors' that bend coverage around corners",
+  "D-MIMO / cell-free: the end of the dreaded cell edge",
+  "8 acronyms with easy explanations",
+]} />
+
+<Lesson id="lesson-6-1" title="Lesson 6.1 — Beamforming: From Megaphone to Spotlight">
+
+A traditional antenna is a megaphone: it blasts energy in all directions, and most of it is wasted on empty air. Beamforming uses many small antennas working as a team: by timing each element's transmission precisely, their waves add up in the direction of your phone and cancel out everywhere else. The floodlight becomes a spotlight that follows you around. I have added some additional discussion on beamforming antennas at the end of the module, right before the quiz.
+
+Think of a stadium wave. No single fan creates it, but coordinated timing makes a giant pattern sweep the stands. Antenna elements do the same with radio waves — coordination creates a focused, steerable beam without any moving parts. With MU-MIMO (Multi-User, Multiple-Input, Multiple-Output), the panel juggles multiple spotlights at once, serving several users (or devices) on the very same frequencies.
+
+<Figure id="6.1" src="/images/module-06/img-6-1.png" alt="Many small antenna elements coordinating their timing to turn an all-direction radio floodlight into focused beams that follow multiple users." />
+
+</Lesson>
+
+<Lesson id="lesson-6-2" title="Lesson 6.2 — From Massive to Giga: The MIMO Growth Spurt">
+
+5G's Massive MIMO panels typically pack around 64 antenna elements — revolutionary in their day. 6G's Giga-MIMO aims for hundreds to thousands of elements in a panel of roughly the same size. How? Recall Module 5: antenna elements shrink with wavelength, and FR3's shorter waves mean each element is fingernail-small. Same billboard, far more pixels.
+
+More elements buy three things: sharper beams (energy reaches farther — exactly what FR3 needs to match mid-band coverage from existing sites), more simultaneous beams (more users served at once), and precision that also sharpens ISAC's radar vision (Module 2). But there's a dependency: beams are only as good as their aim, and the aim comes from CSI (Channel State Information, remember) - the network's live map of how radio waves currently travel to each user. Users move, doors open, buses pass; CSI goes stale in milliseconds. Gathering and crunching CSI for thousands of elements is one of 6G's heaviest computational lifts — and a starring role for AI (Module 7 spoiler: AI learns to compress and predict CSI).
+
+<Callout variant="takeaway">Giga-MIMO is the enabling deal of 6G: FR3 spectrum provides the room, thousands of tiny antennas provide the reach, and fresh CSI (increasingly AI-assisted) provides the aim. Remove any leg, and the stool falls.</Callout>
+
+<SoundSmart quote={`"Giga-MIMO closes the FR3 link budget — the array gain is what lets golden-band coverage match mid-band from the same grid."  `} clue={`FR3 signals fade faster than mid-band, but a huge antenna array focuses energy so effectively ('array gain') that coverage from existing antennas stays comparable — which is the whole economic point.`} />
+
+</Lesson>
+
+<Lesson id="lesson-6-3" title="Lesson 6.3 — RIS: Wallpaper That Bends Radio Waves">
+
+Beams have one enemy they can't outmuscle: solid obstacles. That’s why RIS is revolutionary. The Reconfigurable Intelligent Surface (RIS) is a thin panel, cheap and mostly passive, covered in hundreds of tiny elements that each nudge the phase of waves hitting them. Set the elements right, and the panel becomes a programmable mirror: it takes a beam arriving from the tower antenna and redirects it around a corner, into a dead zone, or down a corridor.
+
+The charm is economics: an RIS needs little or no power (some are nearly passive stickers), no fiber connection, no radio chain — compare that with deploying a full small cell. Imagine fixing a coverage hole in a parking garage with what amounts to smart wallpaper. RIS is still maturing (3GPP has studied related 'network-controlled repeaters' as a stepping stone, and RIS proper is a hot 6G research and study topic), but it's on every serious 6G slide for a reason. I have added a separate section (Remember RIS) right before the quiz for the gentle geek in you.
+
+<Figure id="6.3" src="/images/module-06/img-6-3.png" alt="A thin reconfigurable intelligent surface acting as a programmable radio mirror that redirects a tower beam around a building corner into a dead zone." />
+
+</Lesson>
+
+<Lesson id="lesson-6-4" title="Lesson 6.4 — D-MIMO: The End of the Cell Edge">
+
+Today's networks are honeycombs: each tower rules its cell, and life at the cell edge — far from your tower, heckled by the neighbor's interference — is miserable.
+
+Distributed MIMO (D-MIMO), also called cell-free, flips the model: many modest antenna sites scattered through an area cooperate as one giant virtual array. Your phone isn't 'in tower A's cell'; it's served by the three or four nearest sites simultaneously, which hand you off so seamlessly the concept of 'edge' dissolves.
+
+The analogy: classic cells are assigned parking spots — tough luck if yours is far away. Cell-free is valet parking with a team of valets: whoever's closest grabs your keys, and several may help at once. The price of the magic is coordination — sites must share data over fast links and stay tightly synchronized, which is why D-MIMO pairs naturally with the AI-driven, deeply coordinated architectures coming in Modules 7 and 8.
+
+<Figure id="6.4" src="/images/module-06/img-6-4.png" alt="Several distributed antenna sites cooperating to serve one phone as a virtual array, replacing a weak cell edge with coordinated cell-free coverage." />
+
+<SoundSmart heading="🎤 SOUND SMART IN A MEETING (WITHOUT UNNECESSARY POSTURING)" quote={`"Cell-free changes the interference story — the neighbor cell stops being a jammer and becomes a serving point."  `} clue={`In today's design, the next tower's signal is mostly noise hurting you. In D-MIMO, that same neighboring site joins your service team — the biggest source of interference becomes a helper.`} />
+
+</Lesson>
+
+<AcronymDecoder moduleNumber={6} rows={[
+  { acronym: "MIMO", standsFor: "Multiple-Input Multiple-Output", explanation: "Using many antennas at once instead of one — like a conversation with many mouths and many ears, sending several data streams over the same frequencies." },
+  { acronym: "Massive MIMO", standsFor: "Massive Multiple-Input Multiple-Output", explanation: "5G's version: tower panels with dozens of antenna elements (often 64), enabling precise beams and multiple simultaneous users." },
+  { acronym: "Giga-MIMO", standsFor: "Gigantic MIMO (6G scale)", explanation: "The 6G leap: hundreds to thousands of antenna elements per panel — possible because FR3's shorter wavelengths make each element tiny." },
+  { acronym: "Beamforming", standsFor: "Not an acronym — a technique", explanation: "Coordinating many antennas so their waves add up in one direction and cancel elsewhere — turning a floodlight into a steerable spotlight." },
+  { acronym: "CSI", standsFor: "Channel State Information", explanation: "The network's live map of how radio waves currently travel to each user — the 'weather report' beams need to aim accurately." },
+  { acronym: "RIS", standsFor: "Reconfigurable Intelligent Surface", explanation: "A thin, mostly-passive panel of tiny adjustable mirrors for radio waves — stick it on a wall to bounce coverage into dead zones." },
+  { acronym: "D-MIMO", standsFor: "Distributed MIMO (cell-free)", explanation: "Many small antenna sites cooperating as one giant virtual antenna, so you're always near several — no more cell edges." },
+  { acronym: "SU/MU-MIMO", standsFor: "Single-User / Multi-User MIMO", explanation: "Serving one user with multiple streams (SU) vs. serving several users at once on the same frequencies (MU) — the tower as a multitasking juggler." },
+]} />
+
+<Lesson id="remember-ris" title="Remember RIS? (the gentle geek in you)">
+
+A Reconfigurable Intelligent Surface (RIS) is like a smart, programmable mirror for radio waves. It is one of the key candidate technologies being developed for 6G networks (the next generation of wireless technology after 5G).
+
+### 1. The Problem: Signals Get Blocked
+
+6G will use super high-frequency radio signals (like millimeter waves or terahertz waves) to stream massive amounts of data almost instantly.
+
+The downside? High-frequency waves suck at going through walls, around corners, or through obstacles. If a building or a thick wall gets between your phone and the cell tower, your connection drops or slows down to a crawl.
+
+### 2. The Solution: Smart Mirrors
+
+Instead of building expensive new cell towers everywhere, scientists created RIS. An RIS utilizes an onboard microcontroller to dynamically alter the surface impedance of its individual metamaterial elements in real time. By adjusting this reactive loading, the surface shifts the phase and amplitude of the incident electromagnetic waves. This electronic control effectively turns the passive environment into a software-defined channel, allowing you to dynamically reroute and shape the RF propagation path.
+
+Let me unpack this gibberish:
+
+### Metamaterial Surface
+
+Real-world Reconfigurable Intelligent Surfaces (RIS) look like high-tech circuit boards packed with hundreds of repeating, microscopic shapes.
+
+- The Grid Pattern: Each tiny square or engineered copper loop on the surface (made of plastics & fiberglass) acts as an artificial "atom" that interacts with radio waves.
+- The Control Center: A central microcontroller chip (the square attached to the grid) tells each individual loop exactly how to shift the bouncing signal.
+
+### Surface Impedance:
+
+Surface impedance is a measure of how much a surface resists or allows the flow of electromagnetic waves hitting it. By altering this impedance using a tiny computer, we can force radio waves to bounce off the surface at custom angles, helping steer 6G signals around walls straight to your phone.
+
+### Reactive Loading:
+
+Reactive loading is like adjusting the stiffness of a trampoline before a ball bounces off it. By using a tiny computer to change the electrical "springiness" of the surface elements, we control how hard or soft the surface feels to an incoming radio wave.
+
+### Shifting the Amplitude
+
+Shifting the amplitude means changing the height of the signal's wave, which changes how strong or weak the signal is. It works just like a volume knob on a speaker, turning the signal up so it can travel farther, or turning it down to create a quiet zone.
+
+### Shifting the Phase
+
+Shifting the phase means altering the timing of the wave, delaying it by a fraction of a second so its peaks and valleys sync up differently. By changing this timing across a surface, you can force multiple waves to team up and bend together, steering the signal in any direction you want.
+
+A phased array antenna does the exact same thing by shifting the phase and amplitude of signals across multiple tiny antennas. The main difference is that a phased array actively creates and steers its own radio beam, while an RIS simply grabs and redirects a beam sent by something else.
+
+### 3. Why It’s a Big Deal for 6G
+
+Low Energy: Unlike traditional signal repeaters or cell towers, a basic RIS doesn't generate or amplify radio signals—it just directs them. That means it uses almost zero power.
+
+Eliminates Dead Zones: It turns dead zones (like underground garages, elevators, or dense city alleys) into strong coverage areas.
+
+Environment Control: Historically, network engineers could only control the transmitter (cell tower) and receiver (your phone). RIS lets engineers control the environment in between for the first time.
+
+Good news for my fellow in-building engineers:
+
+RIS can easily be used inside buildings by mounting thin panels on interior walls or ceilings. By reflecting and steering radio signals around obstacles like furniture and thick walls, they can potentially eliminate indoor dead zones and deliver strong, reliable 6G coverage throughout the space.
+
+</Lesson>
+
+<Quiz questions={[
+  "1. In one sentence, what does beamforming do?", "2. Why does FR3 spectrum make Giga-MIMO practical?", "3. What is CSI and why do beams fail without it?", "4. How does an RIS panel differ from a small cell?", "5. What problem does D-MIMO (cell-free) solve?",
+]} answers={[
+  "1. It coordinates many antennas so radio energy focuses toward the intended user like a spotlight instead of spraying everywhere.", "2. Antenna elements scale with wavelength; FR3's shorter waves mean tiny elements, so hundreds or thousands fit in a normal-size tower panel.", "3. Channel State Information is the live map of how signals travel to each user; without fresh CSI, beams aim at where users USED to be.", "4. A small cell is a full radio (powered, transmitting); an RIS is a mostly-passive smart mirror that redirects existing signals — cheap, thin, low-power.", "5. Cell edges — instead of belonging to one tower and suffering at its boundary, users are served by several cooperating sites at once.",
+]} />
+
+<ModuleNav position="bottom" previous={{ label: "Back: Module 5 — Spectrum", href: "/modules/5" }} next={{ label: "Next: Module 7 — AI-Native Networks", href: "/modules/7" }} />

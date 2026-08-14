@@ -10,11 +10,12 @@ type ModuleNavProps = {
   position: "top" | "bottom";
   previous?: { label: string; href: string };
   current?: string;
-  next: { label: string; href: string };
+  next?: { label: string; href: string };
+  completion?: string;
   jumpLinks?: JumpLink[];
 };
 
-export function ModuleNav({ position, previous, current, next, jumpLinks = [] }: ModuleNavProps) {
+export function ModuleNav({ position, previous, current, next, completion, jumpLinks = [] }: ModuleNavProps) {
   return (
     <nav
       className={`${styles.moduleNav} ${
@@ -31,7 +32,8 @@ export function ModuleNav({ position, previous, current, next, jumpLinks = [] }:
             <span>Start here!</span>
           )}
           {current ? <span className={styles.currentModule}>You are here: {current}</span> : null}
-          <Link href={next.href}>{next.label} ▶</Link>
+          {next ? <Link href={next.href}>{next.label} ▶</Link> : null}
+          {completion ? <span>{completion}</span> : null}
         </div>
       </div>
       {jumpLinks.length > 0 ? (

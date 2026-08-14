@@ -1,0 +1,141 @@
+<ModuleHeader
+  title="Module 5 — Spectrum: The New Real Estate (FR1, FR2, FR3 & Beyond)"
+  meta="6G Fundamentals Tutorial | Module 5 of 10 | Estimated time: 35 minutes"
+/>
+
+<ModuleNav
+  position="top"
+  previous={{ label: "Module 4: Digital Twins & Ambient IoT", href: "/modules/4" }}
+  current="Module 5"
+  next={{ label: "Module 6: The Radio Magic", href: "/modules/6" }}
+  jumpLinks={[
+    { label: "Lesson 5.1", href: "#lesson-5-1" },
+    { label: "5.2", href: "#lesson-5-2" },
+    { label: "5.3", href: "#lesson-5-3" },
+    { label: "5.4", href: "#lesson-5-4" },
+    { label: "Acronym Decoder", href: "#acronym-decoder" },
+    { label: "Quiz", href: "#quiz" },
+  ]}
+/>
+
+<LearningObjectives items={[
+  "Why spectrum is the real estate of wireless — and why location is everything",
+  "The neighborhoods: FR1 (suburbs), FR2 (penthouse), and 6G's new district, FR3",
+  "Why higher frequency means more capacity but a shorter leash — no math, one whistle",
+  "Where sub-THz fits, and what carriers actually plan to deploy first",
+  "8 acronyms with easy explanations",
+]} />
+
+<Lesson id="lesson-5-1" title="Lesson 5.1 — Spectrum Is Real Estate: Location, Location, Location">
+
+Radio spectrum is the range of frequencies signals can use — and like land, there's only so much of it, every parcel has different qualities, and governments auction the good lots for billions. When engineers say a carrier 'holds mid-band spectrum,' they're describing a property portfolio.
+
+The physics of the neighborhoods comes down to one trade-off you can hear with your own ears: a low drum beat travels through walls and down the block (low frequency = long reach, but a narrow 'pipe' for data), while a high whistle is crisp and information-dense but dies a few rooms away (high frequency = huge pipe, short leash). Every spectrum decision in the industry is some version of choosing between the drum and the whistle.
+
+<Figure id="5.1" src="/images/module-05/img-5-1.png" alt="A spectrum neighborhood analogy comparing low-frequency signals that travel far through walls with high-frequency signals that carry more data over shorter distances." />
+
+</Lesson>
+
+<Lesson id="lesson-5-2" title="Lesson 5.2 — The Established Neighborhoods: FR1 and FR2">
+
+FR1 (below ~7 GHz) is where mobile life happens today. Low-band (below 1 GHz) blankets rural areas and seeps deep into buildings — wonderful coverage, modest speeds. Mid-band (~2–6 GHz) is 5G's workhorse: a good compromise that made mid-band spectrum the industry's most prized asset of the 2020s.
+
+FR2 (mmWave, 24–71 GHz) was 5G's moonshot: colossal capacity, but the signals are divas — blocked by walls, trees, rain, and literally your hand around the phone. It found its niche in stadiums, arenas, and dense hotspots, but it never became the citywide blanket the early hype promised. Lesson learned, and it profoundly shaped 6G planning.
+
+<Callout variant="takeaway">5G's mmWave experience taught the industry humility: raw capacity is useless if the signal can't reliably reach people. 6G's spectrum strategy is built around that lesson.</Callout>
+
+</Lesson>
+
+<Lesson id="lesson-5-3" title="Lesson 5.3 — FR3: The Golden Bands (6G's New District)">
+
+6G's headline real-estate move is FR3, roughly 7–24 GHz — nicknamed the centimetric or golden bands. Why golden? It's the Goldilocks zone: several times more bandwidth than today's mid-band, while propagating well enough to reuse existing tower sites — which matters enormously, because building all-new sites is the most expensive sentence in telecom.
+
+There's a catch: FR3 signals fade faster than mid-band signals, so covering the same area from the same towers requires much smarter antennas that focus energy precisely where users are. That's the subject of Module 6 — Giga-MIMO exists largely because of FR3. Spectrum and antennas are a package deal.
+
+Also worth knowing: parts of FR3 are already occupied — satellite services, radar, and government users live there. Expect spectrum sharing frameworks (polite time-sharing between old and new tenants) to be a recurring expert topic, along with the usual EMF safety compliance that applies to every band.
+
+Since FR3 is the Golden Band, I posted an addendum right before the Quiz (optional reading).
+
+<Figure id="5.3" src="/images/module-05/img-5-3.png" alt="FR3 shown as the golden-band middle ground between the wide reach of FR1 and the very high capacity but short range of FR2." />
+
+<SoundSmart
+  heading="🎤 SOUND SMART IN A MEETING (WITHOUT UNNECESSARY POSTURING)"
+  quote={`"The FR3 business case is site reuse — if we can serve golden bands from the existing grid with Giga-MIMO, the capacity comes without a new-site buildout."  `}
+  clue={`The money question isn't 'is FR3 fast?' — it's 'can current towers cover it?' If advanced antennas make the answer ‘yes’, carriers gain capacity without the crushing cost of building thousands of new sites.`}
+/>
+
+</Lesson>
+
+<Lesson id="lesson-5-4" title="Lesson 5.4 — The Frontier: Sub-THz, and How It All Stacks Together">
+
+Above 100 GHz lies the sub-terahertz range — oceanic bandwidth, with ranges measured in meters ("Oceanic bandwidth" means a massive, nearly endless amount of open space for data to travel through, similar to how vast and wide an ocean is).
+
+Early 6G will use it sparingly: room-scale hyper-hotspots, wireless backhaul (tower-to-tower links replacing fiber runs), and, notably, sensing, since tiny wavelengths resolve fine detail (Module 2's ISAC gets sharper eyes up here).
+
+Real networks won't pick one band — they'll layer them like clothing: low-band as the base layer everywhere, mid-band and FR3 as the warm middle layers carrying most traffic, mmWave and sub-THz as the flashy jacket for special occasions. Carrier aggregation (CA) stitches the layers together, so your device uses several at once. Meanwhile, spectrum is governed globally: the ITU's World Radiocommunication Conference (WRC) decides which bands get studied and allocated — WRC-27 is the meeting 6G watchers care about — and 3GPP then writes the recipes for the bands that emerge.
+
+<Figure id="5.4" src="/images/module-05/img-5-4.png" alt="A layered spectrum wardrobe with low-band as the coverage base, mid-band and FR3 carrying most traffic, and mmWave and sub-THz serving special short-range uses." />
+
+</Lesson>
+
+<AcronymDecoder moduleNumber={5} rows={[
+  { acronym: "FR1", standsFor: "Frequency Range 1 (sub-7 GHz)", explanation: "The 'suburbs and mid-town' of spectrum: signals travel far and pass through walls decently. Where most of today's traffic lives." },
+  { acronym: "FR2", standsFor: "Frequency Range 2 (mmWave, 24–71 GHz)", explanation: "The 'penthouse district': gigantic capacity, terrible commute — signals die quickly and hate walls, rain, even your hand." },
+  { acronym: "FR3", standsFor: "Frequency Range 3 (≈7–24 GHz, 'centimetric' / golden bands)", explanation: "The new neighborhood 6G is moving into: a compromise between FR1's reach and FR2's capacity. The most talked-about 6G real estate." },
+  { acronym: "THz / sub-THz", standsFor: "(sub-)Terahertz (100+ GHz)", explanation: "The experimental frontier: absurd capacity over short distances. Think of it as a firehose you can only use across the room." },
+  { acronym: "GHz", standsFor: "Gigahertz (billions of cycles per second)", explanation: "The unit for radio frequency. Higher GHz = more room for data, but shorter reach — like a higher-pitched voice that carries less far." },
+  { acronym: "CA", standsFor: "Carrier Aggregation", explanation: "Gluing several frequency channels together so a device uses them at once — like opening extra checkout lanes for one customer." },
+  { acronym: "EMF", standsFor: "Electromagnetic Field (exposure limits)", explanation: "The regulated safety limits on radio energy around antennas. All bands, including new 6G ones, must comply." },
+  { acronym: "Licensed / unlicensed", standsFor: "Not an acronym — spectrum access types", explanation: "Licensed spectrum is private property (a carrier paid for exclusive use); unlicensed is a public park (Wi-Fi lives there) — free but crowded." },
+]} />
+
+<Lesson id="lesson-5-3-addendum" title="Lesson 5.3 Addendum:">
+
+Here is a quick breakdown of what the FR3 band (also called the "upper mid-band" or "golden band") is, along with its pros and cons:
+
+### The Frequencies
+
+The Range: FR3 spans from 7.125 GHz to 24.25 GHz (often simplified as 7 to 24 GHz).
+
+The Sweet Spot: It sits right between today's standard 5G (FR1) and the hyper-fast but short-range millimeter-wave 5G (FR2).
+
+### The Benefits (Pros)
+
+The "Best of Both Worlds": It offers much faster speeds than standard 5G while carrying signals much farther than millimeter-wave 5G.
+
+Massive Data Capacity: It has plenty of open space to handle data-heavy tech like advanced AI applications, high-end Virtual/Augmented Reality (XR), and smart city networks.
+
+Smaller, Smarter Antennas: Because the wavelengths are smaller, engineers can pack hundreds of tiny antenna elements into a single device or cell tower, allowing them to shoot highly focused data beams directly to your phone.
+
+### The Costs & Challenges (Cons)
+
+High Infrastructure Costs: The signals still can't travel miles like old 4G waves. Carriers will have to pay billions to build a massive amount of "small cells" (mini cell towers) closer together to keep you connected.
+
+Physical Blockages: While better than millimeter-wave, FR3 signals can still be easily weakened or blocked by concrete buildings, trees, and even heavy rain.
+
+Crowded Airwaves: Many of these frequencies are already legally reserved for military defense satellites, weather tracking, and Wi-Fi. Sharing space without causing radio interference is incredibly complex and expensive to figure out.
+
+Because FR3 strikes a perfect balance between the wide coverage of FR1 and the super-fast speeds of FR2, it allows for seamless, continuous connectivity. This makes specific "hybrid" and motion-heavy apps possible that the other bands struggle to do alone:
+
+- Continuous Indoor-to-Outdoor Mixed Reality (XR)
+- Smart City Drone Networks & Flying Taxis (UAVs)
+- Integrated Sensing and Communication (ISAC)
+- High-Speed Connected Vehicles (C-V2X)
+
+</Lesson>
+
+<Quiz questions={[
+  "1. What's the fundamental trade-off as frequency goes up?",
+  "2. Why is FR3 (≈7–24 GHz) called the 'golden band' for 6G?",
+  "3. Why did mmWave (FR2) disappoint as a citywide 5G solution?",
+  "4. What is carrier aggregation in one sentence?",
+  "5. Sub-THz spectrum offers enormous capacity — so what's the catch?",
+]} answers={[
+  "1. More capacity (wider channels) but shorter range and worse penetration through walls, rain, and obstacles.",
+  "2. It balances FR1's reach with FR2's capacity — enough bandwidth for 6G speeds while still covering usefully from existing tower sites.",
+  "3. Its signals die over short distances and are blocked by walls, foliage, rain, even hands — great for hotspots, impractical for blanket coverage.",
+  "4. Combining multiple frequency channels so one device uses them simultaneously for more total speed.",
+  "5. Extremely short range and fragile propagation; it suits room-scale or point-to-point links, not wide-area coverage.",
+]} />
+
+<ModuleNav position="bottom" previous={{ label: "Back: Module 4 — Digital Twins & Ambient IoT", href: "/modules/4" }} next={{ label: "Next: Module 6 — The Radio Magic: Giga-MIMO & RIS", href: "/modules/6" }} />

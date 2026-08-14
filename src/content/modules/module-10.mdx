@@ -1,0 +1,85 @@
+<ModuleHeader title="Module 10 — The 5G vs. 6G Showdown & The Road Ahead" meta="6G Fundamentals Tutorial  |  Module 10 of 10  |  Estimated time: 35 minutes" />
+
+<ModuleNav position="top" previous={{ label: "Module 9: Trust, Energy & Sustainability", href: "/modules/9" }} current="Module 10 — the finale!" jumpLinks={[
+  { label: "Lesson 10.1", href: "#lesson-10-1" }, { label: "10.2", href: "#lesson-10-2" }, { label: "10.3", href: "#lesson-10-3" }, { label: "Acronym Decoder", href: "#acronym-decoder" }, { label: "Capstone Quiz", href: "#quiz" },
+]} />
+
+<LearningObjectives items={[
+  "The complete 5G-vs-6G comparison — every module's payoff in one table",
+  "The road ahead: the Release train, WRC-27, and what happens between now and 2030",
+  "How to listen to expert conversations (and vendor pitches) with calibrated skepticism",
+  "Why this matters for people's lives — the view from outside the industry",
+  "Final acronyms + a capstone quiz to certify your inner 6G-whisperer",
+]} />
+
+<Lesson id="lesson-10-1" title="Lesson 10.1 — The Showdown: 5G vs. 6G, Row by Row">
+
+You've earned this table. Every row is a module you've completed — read it once as review, then bookmark it as your cheat sheet:
+
+<ComparisonTable rows={[
+  { dimension: "Headline job", current: "Connect people and things, fast", future: "Connect + sense + think: communication, radar-like sensing (ISAC), and built-in AI" },
+  { dimension: "Peak experience", current: "Streaming, cloud gaming, early XR demos", future: "Everyday lightweight XR, holographic presence, internet of senses (touch)" },
+  { dimension: "Latency promise", current: "Low — usually", future: "Low — dependably, with deadline guarantees (HRLLC) and tamed jitter" },
+  { dimension: "Spectrum home", current: "FR1 mid-band workhorse + FR2 hotspots", future: "Adds FR3 'golden bands' (7–24 GHz) + sub-THz for special cases" },
+  { dimension: "Antennas", current: "Massive MIMO (~64 elements)", future: "Giga-MIMO (hundreds–thousands of elements), RIS smart surfaces, cell-free D-MIMO" },
+  { dimension: "Device universe", current: "Phones, gadgets, industrial IoT with batteries", future: "Adds battery-free Ambient IoT tags on individual items" },
+  { dimension: "Intelligence", current: "AI added on for optimization", future: "AI-native: designed in, from air interface to intent-based operations" },
+  { dimension: "Coverage", current: "Where towers reach (+ early satellite add-ons)", future: "3D network: ground + aerial + satellite (NTN) as one seamless service" },
+  { dimension: "Energy stance", current: "Efficiency improvements per bit", future: "Energy as a headline KPI: carry more, consume less in absolute terms" },
+  { dimension: "Security era", current: "Strong classical crypto", future: "Quantum-safe (PQC) + zero-trust assumed from day one" },
+]} />
+
+<Callout variant="takeaway">The honest one-liner: 5G made the network faster; 6G gives it new senses (radar), a new brain (native AI), and a bigger home (space). Speed improves too — but it's the least interesting row of the table.</Callout>
+
+<Figure id="10.1" src="/images/module-10/img-10-1.png" alt="A side-by-side 5G and 6G comparison showing 6G adding integrated sensing, native AI, expanded spectrum, advanced antennas, satellite coverage, energy goals, and quantum-safe security." />
+
+</Lesson>
+
+<Lesson id="lesson-10-2" title="Lesson 10.2 — The Road Ahead: What Happens Between Now and 2030">
+
+Here's the itinerary, assembled from everything you've learned:
+
+- 2024–2026 — 5G-Advanced era (Rel-18/19): the bridge. XR-awareness, AI/ML in the air interface, Ambient IoT beginnings, ISAC channel studies — 6G's homework done inside 5G's house.
+- 2025–2027 — Rel-20 (6G study phase): committees evaluate candidates: FR3 usage, Giga-MIMO designs, AI-native architecture, ISAC integration. Everything is a proposal; nothing is a promise.
+- 2027 — WRC-27: countries vote on spectrum — the FR3 golden bands' global fate gets substantially decided here. Watch this one.
+- ~2027–2029 — Rel-21 (first 6G specifications): study becomes law. Vendors build to spec; trials scale up.
+- ~2030 — Commercial launch: on the decade rhythm, aligned with IMT-2030. Early networks lean on 5G infrastructure while 6G layers arrive (nobody bulldozes a working network).
+
+<Figure id="10.2" src="/images/module-10/img-10-2.png" alt="A 2024-to-2030 roadmap from 5G-Advanced through Release 20 studies, WRC-27 spectrum decisions, Release 21 specifications, and commercial 6G launch." />
+
+<SoundSmart quote={`"Between now and Rel-21, track three signals: WRC-27 spectrum outcomes, the Rel-20 study conclusions, and how much AI-native survives contact with implementation reality."`} clue={`Three checkpoints predict 6G's real shape: which airwaves the world allocates (WRC-27), which studied technologies 3GPP endorses (Rel-20 conclusions), and whether the ambitious AI plans prove practical to build.`} />
+
+</Lesson>
+
+<Lesson id="lesson-10-3" title="Lesson 10.3 — Why Any of This Matters: The View from Outside">
+
+Strip away the acronyms and 6G is a bet on four human improvements.
+
+- Safety: networks that sense falls in an elderly parent's home without cameras, spot drones over stadiums, warn drivers about what's around the blind curve, and stay alive through hurricanes.
+- Presence: grandparents life-size in the living room from 2,000 miles away; a specialist surgeon's hands available in any rural hospital.
+- Inclusion: connectivity that follows and reaches people into deserts, oceans, and disaster zones — closing the gap for the billions the tower grid never reached.
+- Stewardship: more digital life carried on less energy, with every item in the economy trackable enough to actually recycle.
+
+And for you — the engineer or PM who just finished this course — it means you can now sit in the meeting, hear 'the Rel-20 ISAC study is converging on FR3 monostatic sensing with Giga-MIMO arrays,' translate it in your head ('the 6G radar studies favor the golden bands, using the tower's own huge antenna to both send and listen'), and ask the question that actually matters.
+
+That's the whole superpower this course promised. Go use it.
+
+<Figure id="10.3" src="/images/module-10/img-10-3.png" alt="Four human outcomes of 6G—safety, presence, inclusion, and stewardship—connecting homes, hospitals, remote regions, disaster zones, and recyclable goods." />
+
+</Lesson>
+
+<AcronymDecoder moduleNumber={10} rows={[
+  { acronym: "5G-Advanced", standsFor: "Not an acronym — Rel-18/19 branding", explanation: "5G's final, most polished form (Releases 18–19) — the bridge generation carrying early 6G homework like ISAC studies and AI/ML in the radio." },
+  { acronym: "Study item vs. Work item", standsFor: "3GPP work types", explanation: "A study item asks 'is this feasible?' (research, reports). A work item says 'we're building it' (binding specifications). Rel-20 6G = studies; Rel-21 = specs." },
+  { acronym: "WRC", standsFor: "World Radiocommunication Conference", explanation: "The ITU's global summit (every ~4 years) where countries decide which spectrum bands to allocate. WRC-27 is the one 6G watchers circle on their calendars." },
+  { acronym: "IMT-2030 (revisited)", standsFor: "The ITU's 6G framework", explanation: "The requirements 6G must meet — the finish line every module in this course has been pointing at." },
+  { acronym: "Interoperability", standsFor: "Not an acronym — the whole point", explanation: "Any phone, any network, any country, it just works. The quiet miracle that standards bodies like 3GPP exist to protect." },
+]} />
+
+<Quiz questions={[
+  "1. Name the three genuinely NEW capability areas 6G adds beyond 'faster 5G.'", "2. What's the difference between a 3GPP study item and a work item, and which Releases map to 6G's?", "3. Which spectrum range is 6G's headline new home, and what makes it 'golden'?", "4. Pick any three rows of the 5G-vs-6G table and restate them from memory.", "5. A vendor tells you their product is '6G-ready' in 2026. What's the professionally polite response?",
+]} answers={[
+  "1. Integrated sensing (ISAC), AI-native operation, and ubiquitous 3D coverage (NTN) — the new half of the IMT-2030 hexagon.", "2. Study = feasibility research (Rel-20 for 6G); work item = binding specifications (Rel-21 targets the first 6G specs).", "3. FR3 (~7–24 GHz): enough bandwidth for 6G capacity while covering well enough to reuse existing tower sites — with Giga-MIMO closing the gap.", "4. Self-check — e.g., latency: usually-low → dependably-low; antennas: Massive → Giga-MIMO + RIS + cell-free; security: classical → PQC + zero-trust.", "5. Skepticism: Rel-20 is study-phase; no binding 6G specs exist before Rel-21, so nothing can truly conform to 6G standards yet — it's a proposal, not a spec.",
+]} />
+
+<ModuleNav position="bottom" previous={{ label: "Back: Module 9 — Trust, Energy & Sustainability", href: "/modules/9" }} completion="🎓 Course complete! Revisit any module, or keep the Module 10 table as your cheat sheet." />

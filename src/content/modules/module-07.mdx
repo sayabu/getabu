@@ -1,0 +1,84 @@
+<ModuleHeader title="Module 7 — AI-Native Networks: The Network That Learns" meta="6G Fundamentals Tutorial  |  Module 7 of 10  |  Estimated time: 35 minutes" />
+
+<ModuleNav position="top" previous={{ label: "Module 6: The Radio Magic", href: "/modules/6" }} current="Module 7" next={{ label: "Module 8: Architecture, Core & Satellites", href: "/modules/8" }} jumpLinks={[
+  { label: "Lesson 7.1", href: "#lesson-7-1" }, { label: "7.2", href: "#lesson-7-2" }, { label: "7.3", href: "#lesson-7-3" }, { label: "7.4", href: "#lesson-7-4" }, { label: "Acronym Decoder", href: "#acronym-decoder" }, { label: "Quiz", href: "#quiz" },
+]} />
+
+<LearningObjectives items={[
+  "The difference between sprinkling AI on a network and building one out of AI",
+  "AI in the radio: learned beams, compressed CSI, and receivers no human designed",
+  "AI running operations: from cruise control (5G) toward self-driving (6G)",
+  "The honest fine print: trust, explainability, and energy",
+  "8 acronyms with easy explanations",
+]} />
+
+<Lesson id="lesson-7-1" title="Lesson 7.1 — Bolt-On vs. Built-In: What 'AI-Native' Means">
+
+5G was designed by humans writing rules, and AI was later invited in as a helpful guest — optimizing here, predicting there. 6G flips the philosophy: AI-native means the network is designed from day one assuming AI will run key parts of it. The analogy: 5G is a house where you added smart bulbs and a learning thermostat; 6G is a house architected around automation — sensors in the walls, wiring designed for it, rooms that expect to be managed by software.
+
+Concretely, AI-native shows up in three layers, which the next lessons walk through: AI in the radio itself (Lesson 7.2), AI running network operations (7.3), and — completing the circle from Module 1's hexagon — the network as a delivery platform for AI, carrying and hosting AI workloads for users and industries.
+
+<Figure id="7.1" src="/images/module-07/img-7-1.png" alt="A 5G house retrofitted with separate smart devices compared with a 6G house designed from the foundation around integrated AI automation." />
+
+</Lesson>
+
+<Lesson id="lesson-7-2" title="Lesson 7.2 — AI in the Radio: Learning to Speak Wireless Better Than We Do">
+
+Decades of brilliant humans hand-crafted how radios estimate channels, form beams, and decode signals. Real radio environments with millions of parameters constantly changing are far messier than any textbook model. Since AI/ML (AI & Machine Learning) excels in finding, learning, and applying patterns it’s an ideal tool for organizing this mess. The flagship examples (and the exact ones 3GPP studied in Rel-18/19 as 'AI/ML for the NR air interface'):
+
+- CSI compression & prediction: Module 6 showed CSI is huge and goes stale fast. AI learns to compress it brutally (sending the gist, not the encyclopedia) and to PREDICT where a moving user's channel is heading — aiming beams at where you'll be.
+- Beam management: instead of sweeping through candidate beams like a lighthouse, AI learns your building's layout and jumps straight to the likely best beam.
+- Smarter positioning: AI squeezes better location accuracy out of messy indoor signal reflections.
+
+The endgame idea, genuinely 6G, is the AI-designed air interface: letting the AIs of transmitter and receiver learn parts of the signaling scheme together, discovering encodings no human would draw on a whiteboard. Think of two people who've worked together for 20 years developing their own shorthand — unintelligible to outsiders, ruthlessly efficient between them.
+
+<Figure id="7.2" src="/images/module-07/img-7-2.png" alt="AI learning radio patterns to compress and predict CSI, select beams, improve positioning, and help transmitter and receiver develop an efficient shared signaling shorthand." />
+
+<SoundSmart quote={`"Rel-18/19 picked the low-hanging AI use cases — CSI feedback, beam management, positioning — but the 6G question is how much of the PHY we're willing to let models learn end-to-end." `} clue={`3GPP started with safe, contained AI jobs. The bold 6G debate is whether to let AI design chunks of the physical radio layer itself, rather than just assisting human-designed pieces.`} />
+
+</Lesson>
+
+<Lesson id="lesson-7-3" title="Lesson 7.3 — AI Running the Network: From Cruise Control to Self-Driving">
+
+Networks are colossal machines — thousands of sites, millions of parameters, and traffic that shifts hourly. The automation journey mirrors cars: SON (self-organizing networks) was cruise control — handy rule-based scripts. 5G added smarter assists: the NWDAF analytics brain in the core, and the RIC — an intelligence layer from the O-RAN ecosystem where optimization apps observe the radio network and tune it. 6G aims for genuine self-driving: intent-based operation, where a human states the goal ('cut energy 20% tonight without hurting emergency services') and the network's AI figures out the thousand knob-turns to achieve it.
+
+Two supporting ideas complete the picture. First, the network keeps a digital twin of itself (Module 4's concept, aimed inward): AI rehearses changes on the twin before touching production — a flight simulator for network operations. Second, learning happens without hoarding private data: techniques like federated learning let sites and devices train a shared model by exchanging model updates, not raw user data.
+
+<Figure id="7.3" src="/images/module-07/img-7-3.png" alt="Network automation progressing from rule-based cruise control to AI self-driving operations, with changes rehearsed on a digital twin before reaching the live network." />
+
+<Callout variant="takeaway">The operational promise of AI-native isn't sci-fi — it's economics: networks too complex for humans to tune, tuned continuously by machines, with the digital twin as the safety net.</Callout>
+
+</Lesson>
+
+<Lesson id="lesson-7-4" title="Lesson 7.4 — The Fine Print: Trust, Explainability & the Energy Bill">
+
+An honest expert always mentions the fine print, so here's yours.
+
+Trust: when AI controls infrastructure that carries 911 calls, 'it usually works' is not a sentence anyone wants to say to a regulator. Expect heavy emphasis on explainability (AI that can justify its choices), guardrails, and fallback modes where humans or simple rules take over.
+
+Energy: AI itself consumes power — training big models is famously hungry. The design bet is that AI saves far more energy than it burns (sleeping idle radios, right-sizing capacity hour by hour), and Module 9 picks up that thread.
+
+Data: models need mountains of it, and networks handle sensitive information — hence privacy-preserving learning isn't optional garnish; it's a design requirement, exactly the kind of cross-cutting IMT-2030 goal Module 1 flagged.
+
+<SoundSmart quote={`"Intent-based ops only flies if the AI is explainable and the twin catches regressions — nobody's giving a black box write-access to a live RAN." `} clue={`Operators will let AI steer the network only when it can explain its decisions and every change is first rehearsed on the network’s digital twin. Unexplained AI won’t get the keys.`} />
+
+</Lesson>
+
+<AcronymDecoder moduleNumber={7} rows={[
+  { acronym: "AI/ML", standsFor: "Artificial Intelligence / Machine Learning", explanation: "Software that learns patterns from data instead of following hand-written rules — the network's new apprentice that gets better with experience." },
+  { acronym: "AI-native", standsFor: "Not an acronym — a design philosophy", explanation: "AI designed into the network's core from day one, rather than sprinkled on top afterward. Built-in, not bolt-on." },
+  { acronym: "CSI (revisited)", standsFor: "Channel State Information", explanation: "The live map of radio conditions per user (Module 6). AI's first big air-interface job: compressing and predicting it." },
+  { acronym: "RIC", standsFor: "RAN Intelligent Controller", explanation: "The 'brain room' (from the O-RAN world) where AI apps observe the radio network and issue optimization instructions." },
+  { acronym: "SON", standsFor: "Self-Organizing Network", explanation: "The earlier generation of network automation — rule-based scripts that self-configure and self-heal. AI-native is SON's much smarter descendant." },
+  { acronym: "NWDAF", standsFor: "Network Data Analytics Function", explanation: "5G core's built-in analytics brain: it studies network data and serves predictions (like 'congestion coming') to other functions. A 6G AI cornerstone." },
+  { acronym: "Digital twin (of the network)", standsFor: "See Module 4", explanation: "A live virtual copy of the NETWORK itself, where AI can rehearse changes safely before touching reality." },
+  { acronym: "Inference / training", standsFor: "Not acronyms — AI's two modes", explanation: "Training: the AI studies mountains of past data (slow, heavy, done centrally). Inference: the trained AI makes fast decisions in the moment (light, done everywhere)." },
+]} />
+
+<Quiz questions={[
+  "1. What's the difference between 'AI-added' (5G) and 'AI-native' (6G)?", "2. Give two air-interface jobs where AI outperforms hand-crafted engineering.", "3. What does NWDAF do in the core network?", "4. Why does the network keep a digital twin of ITSELF?", "5. Why is 'explainability' a big deal for AI in networks?",
+]} answers={[
+  "1. AI-added bolts learning onto a finished design; AI-native assumes AI from the start — interfaces, data pipelines, and even radio procedures are designed expecting AI to run them.", "2. CSI compression/prediction, beam management, channel estimation, or AI-designed receivers — any two.", "3. It's the analytics function: it studies network data and serves predictions and insights to other network functions.", "4. So AI can rehearse risky changes (new parameters, energy-saving shutdowns) on the virtual copy before applying them to the live network.", "5. Carriers must trust, debug, and answer to regulators for AI decisions; a black box that can't justify choices is hard to certify or troubleshoot.",
+]} />
+
+<ModuleNav position="bottom" previous={{ label: "Back: Module 6 — The Radio Magic", href: "/modules/6" }} next={{ label: "Next: Module 8 — Architecture, Core & Satellites", href: "/modules/8" }} />

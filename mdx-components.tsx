@@ -1,6 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 import { AcronymDecoder } from "@/components/course/AcronymDecoder";
 import { Callout } from "@/components/course/Callout";
+import { ComparisonTable } from "@/components/course/ComparisonTable";
 import { Figure } from "@/components/course/Figure";
 import { LearningObjectives } from "@/components/course/LearningObjectives";
 import { Lesson } from "@/components/course/Lesson";
@@ -12,6 +13,7 @@ import { SoundSmart } from "@/components/course/SoundSmart";
 const courseComponents = {
   AcronymDecoder,
   Callout,
+  ComparisonTable,
   Figure,
   LearningObjectives,
   Lesson,
