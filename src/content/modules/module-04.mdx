@@ -37,7 +37,7 @@ What twins are for: trying dangerous or expensive things safely. Reroute a city'
 <Figure
   id="4.1"
   src="/images/module-04/img-4-1.png"
-  alt="A real city and factory continuously sending sensor updates to live digital twins where traffic, machinery, and infrastructure changes can be tested safely."
+  alt="An engineer uses a live digital twin of a city to test a traffic-flow change and preview its effect before applying it to the real city."
 />
 
 </Lesson>
@@ -47,6 +47,12 @@ What twins are for: trying dangerous or expensive things safely. Reroute a city'
 A twin's only real currency is trust, and trust requires freshness. If the virtual factory shows a robot arm at position A while the real arm has moved to position B, decisions based on the twin are, in effect, decisions based on fiction. Engineers even have a metric for this — the age of information: not 'how fast can data travel' but 'how stale is my current picture of reality?'
 
 That means the network's job isn't just speed — it's keeping thousands of tiny update streams flowing without gaps, prioritizing the updates that matter (the overheating motor) over the ones that don't (the thermostat in a stable room). This blends everything you've met so far: sensing (Module 2) feeds the twin, and reliable low-latency links carry the critical updates.
+
+<Figure
+  id="4.2"
+  src="/images/module-04/img-4-2.png"
+  alt="The same robotic arm shown by two digital twins: a stale twin last updated eight seconds ago displays the wrong position, while a fresh twin updated 20 milliseconds ago matches reality."
+/>
 
 <Callout variant="takeaway">
   A digital twin is only as good as its freshest data. The network's real deliverable isn't bandwidth — it's an up-to-date picture of reality.
@@ -87,7 +93,7 @@ A digital twin typically needs both: an mMTC swarm of humble sensors painting th
 <Figure
   id="4.4"
   src="/images/module-04/img-4-4.png"
-  alt="A digital twin combining a large mMTC crowd of simple sensor updates with a small number of urgent, highly reliable HRLLC control messages."
+  alt="Side-by-side comparison: mMTC fills a stadium with over a million devices sending small best-effort messages, while HRLLC gives one urgent factory-control message a protected low-latency priority lane."
 />
 
 <SoundSmart
