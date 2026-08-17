@@ -18,7 +18,7 @@ A traditional antenna is a megaphone: it blasts energy in all directions, and mo
 
 Think of a stadium wave. No single fan creates it, but coordinated timing makes a giant pattern sweep the stands. Antenna elements do the same with radio waves — coordination creates a focused, steerable beam without any moving parts. With MU-MIMO (Multi-User, Multiple-Input, Multiple-Output), the panel juggles multiple spotlights at once, serving several users (or devices) on the very same frequencies.
 
-<Figure id="6.1" src="/images/module-06/img-6-1.png" alt="Many small antenna elements coordinating their timing to turn an all-direction radio floodlight into focused beams that follow multiple users." />
+<Figure id="6.1" src="/images/module-06/img-6-1.png" alt="An old megaphone-style antenna broadcasts energy in every direction, while a modern panel coordinates many small elements like a choir to form three focused beams that follow individual users." />
 
 </Lesson>
 
@@ -27,6 +27,8 @@ Think of a stadium wave. No single fan creates it, but coordinated timing makes 
 5G's Massive MIMO panels typically pack around 64 antenna elements — revolutionary in their day. 6G's Giga-MIMO aims for hundreds to thousands of elements in a panel of roughly the same size. How? Recall Module 5: antenna elements shrink with wavelength, and FR3's shorter waves mean each element is fingernail-small. Same billboard, far more pixels.
 
 More elements buy three things: sharper beams (energy reaches farther — exactly what FR3 needs to match mid-band coverage from existing sites), more simultaneous beams (more users served at once), and precision that also sharpens ISAC's radar vision (Module 2). But there's a dependency: beams are only as good as their aim, and the aim comes from CSI (Channel State Information, remember) - the network's live map of how radio waves currently travel to each user. Users move, doors open, buses pass; CSI goes stale in milliseconds. Gathering and crunching CSI for thousands of elements is one of 6G's heaviest computational lifts — and a starring role for AI (Module 7 spoiler: AI learns to compress and predict CSI).
+
+<Figure id="6.2" src="/images/module-06/img-6-2.png" alt="Two same-sized antenna panels compare 5G Massive MIMO with about 64 elements and a few beams against 6G Giga-MIMO with hundreds to thousands of smaller FR3 elements serving many users with many beams." />
 
 <Callout variant="takeaway">Giga-MIMO is the enabling deal of 6G: FR3 spectrum provides the room, thousands of tiny antennas provide the reach, and fresh CSI (increasingly AI-assisted) provides the aim. Remove any leg, and the stool falls.</Callout>
 
@@ -92,6 +94,8 @@ Real-world Reconfigurable Intelligent Surfaces (RIS) look like high-tech circuit
 - The Grid Pattern: Each tiny square or engineered copper loop on the surface (made of plastics & fiberglass) acts as an artificial "atom" that interacts with radio waves.
 - The Control Center: A central microcontroller chip (the square attached to the grid) tells each individual loop exactly how to shift the bouncing signal.
 
+<Figure id="6.5a" src="/images/module-06/img-6-5a.png" alt="A reconfigurable intelligent surface made of many tiny metal loops, each tuned separately by a microcontroller so an incoming radio beam leaves in a new direction using almost no power." />
+
 ### Surface Impedance:
 
 Surface impedance is a measure of how much a surface resists or allows the flow of electromagnetic waves hitting it. By altering this impedance using a tiny computer, we can force radio waves to bounce off the surface at custom angles, helping steer 6G signals around walls straight to your phone.
@@ -107,6 +111,8 @@ Shifting the amplitude means changing the height of the signal's wave, which cha
 ### Shifting the Phase
 
 Shifting the phase means altering the timing of the wave, delaying it by a fraction of a second so its peaks and valleys sync up differently. By changing this timing across a surface, you can force multiple waves to team up and bend together, steering the signal in any direction you want.
+
+<Figure id="6.5b" src="/images/module-06/img-6-5b.png" alt="A phase-shifting comparison shows elements with identical timing sending a wave straight ahead, while progressively delayed elements combine to steer the wave diagonally without moving parts." />
 
 A phased array antenna does the exact same thing by shifting the phase and amplitude of signals across multiple tiny antennas. The main difference is that a phased array actively creates and steers its own radio beam, while an RIS simply grabs and redirects a beam sent by something else.
 
