@@ -22,7 +22,7 @@ NWDAF, as you may remember, is the Network Data Analytics Function. It is like t
 
 LEGO bricks, not a welded appliance. The 6G core discussion is about going further: fewer, simpler bricks, cloud-native from birth, and AI woven.
 
-<Figure id="8.1" src="/images/module-08/img-8-1.png" alt="A mobile network shown as a RAN storefront connected to a cloud-software core headquarters made of small service-based LEGO-like functions." />
+<Figure id="8.1" src="/images/module-08/img-8-1.png" alt="A RAN storefront handles a phone's radio connection and links through standard interfaces to core-network headquarters containing separate identity, session, policy, and analytics functions." />
 
 </Lesson>
 
@@ -48,7 +48,7 @@ Let me unpack what I mean by: “an edge data center — conveniently, often the
 
 For 6G, expect this cloud-native, disaggregated style to be the default assumption, not the innovation.
 
-<Figure id="8.3" src="/images/module-08/img-8-3.png" alt="An open radio site split into RU at the antenna, nearby DU for time-critical processing, and pooled CU beside MEC in an edge data center." />
+<Figure id="8.2" src="/images/module-08/img-8-2.png" alt="An O-RAN site separates the RU radio at the tower top, the time-critical DU at the curb, and the coordinating CU beside MEC in a nearby data center, joined by standardized open interfaces." />
 
 <SoundSmart heading="🎤 SOUND SMART IN A MEETING (WITHOUT UNNECESSARY POSTURING)" quote={`"The interesting 6G architecture debate is how much of the DU migrates to the cloud — fronthaul economics and AI acceleration are pulling in opposite directions."  `} clue={`Engineers argue about where the time-critical radio processing should physically live: pooling it in data centers saves money, but the strict timing of the link to the antennas ('fronthaul') and the need for AI chips near the radio push it back toward the tower.`} />
 
@@ -62,7 +62,7 @@ Orbit matters. LEO (Low Earth Orbit) satellites fly a few hundred km up, close e
 
 The 6G vision is a 3D network: ground towers, aerial platforms, and satellite layers presented to your phone as one seamless service — hiking off-grid, your phone drifts from tower to satellite and back without you noticing. Add sidelink (D2D) - devices talking directly to each other when infrastructure is absent - and 'no signal' starts becoming a historical phrase. While traditional cellular communication follows an Uplink (Device  Base Station) and Downlink (Base Station  Device) model, Sidelink creates a direct link (Device  Device).
 
-<Figure id="8.4" src="/images/module-08/img-8-4.png" alt="A seamless 3D network joining ground towers, aerial platforms, LEO and GEO satellites, and direct device-to-device sidelinks across remote terrain." />
+<Figure id="8.3" src="/images/module-08/img-8-3.png" alt="A hiker beyond ground-tower range stays connected through a layered non-terrestrial network of high-altitude platforms, low-Earth-orbit satellites, and a geostationary satellite." />
 
 </Lesson>
 
