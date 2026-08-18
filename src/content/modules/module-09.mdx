@@ -20,7 +20,7 @@ The solution is Post-Quantum Cryptography (PQC). These are brand-new mathematica
 
 The second shift is philosophical: Zero-Trust Architecture (ZTA). Old networks were castles — hard wall, trusted interior. But modern networks are clouds of software from many vendors (Module 8), running in many places, with satellites and edge sites everywhere; there is no 'interior' anymore. Zero trust replaces the moat with a simple rule: nobody is trusted by default — every function, device, and admin continuously proves identity and authorization, like a building where every single door checks your badge, forever.
 
-<Figure id="9.1" src="/images/module-09/img-9-1.png" alt="Post-quantum locks protecting harvested data from a future quantum master key alongside a zero-trust building where every door continuously checks identity." />
+<Figure id="9.1" src="/images/module-09/img-9-1.png" alt="A thief stores encrypted data to decrypt when quantum computers arrive, while a post-quantum security robot upgrades every door with stronger locks and zero-trust badge checks." />
 
 <SoundSmart quote={`"The PQC migration is a now problem, not a quantum-era problem — harvest-now-decrypt-later means long-lived secrets are already exposed."  `} clue={`Don't wait for quantum computers to exist: data recorded today can be cracked later. Anything that must stay secret for years needs the new quantum-safe encryption immediately.`} />
 
@@ -37,7 +37,7 @@ How does a network diet without starving users? Mostly by not burning energy on 
 - Better hardware: more efficient power amplifiers (historically the RAN's hungriest component) and modern silicon replacing legacy gear.
 - Design honesty: 6G candidate features are increasingly evaluated in 3GPP with energy as an explicit criterion. A feature that wins throughput but wrecks EE (energy efficiency) will have a harder path to adoption by 3GPP.
 
-<Figure id="9.2" src="/images/module-09/img-9-2.png" alt="A mobile network on a smart energy diet using radio sleep modes, AI traffic rightsizing, efficient amplifiers, and energy-efficiency scoring." />
+<Figure id="9.2" src="/images/module-09/img-9-2.png" alt="At 3 a.m., low-demand radio sites sleep while one coverage layer stays awake, and an AI network monitor predicts morning traffic so capacity can wake before demand returns." />
 
 <Callout variant="takeaway">6G's energy story is mostly about eliminating waste: idle radios sleeping, capacity matched to demand by AI, and efficiency graded as strictly as speed.</Callout>
 
@@ -49,7 +49,7 @@ Security asks 'can attackers break in?'; resilience asks a broader question: 'wh
 
 The 6G resilience toolkit assembles pieces you've already met: satellite fallback when ground infrastructure fails (Module 8's NTN), sidelink letting devices relay for each other when towers are down, graceful degradation (emergency calls and critical services keep working even when capacity collapses), and AI-assisted self-healing that reroutes around failures in seconds. The design philosophy in one phrase: a palm tree, not an oak — built to bend through the storm and stand back up.
 
-<Figure id="9.3" src="/images/module-09/img-9-3.png" alt="A resilient 6G network bending through a storm by combining satellite fallback, device relays, graceful degradation, and AI-assisted rerouting." />
+<Figure id="9.3" src="/images/module-09/img-9-3.png" alt="During a destructive storm that disables a ground tower, satellite coverage and phone-to-phone sidelink relays preserve a 911 call and protect emergency communications." />
 
 <SoundSmart quote={`"Resilience KPIs are joining the spec conversation — graceful degradation paths need to be designed, not improvised during the outage."`} clue={`6G planning includes measurable targets for surviving failures. Which services stay alive when things break must be decided in the design phase — not figured out mid-disaster.`} />
 
