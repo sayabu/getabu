@@ -416,7 +416,6 @@
   aspect-ratio: 16 / 9;
   border: 1px solid var(--border-hair);
   border-radius: var(--radius-xl);
-  background: var(--surface-warm);
   box-shadow: var(--shadow-lift);
 }
 
