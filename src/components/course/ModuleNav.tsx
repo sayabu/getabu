@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { getAdjacentModules, getCourseModule } from "@/lib/module-catalog";
+import { ModuleSwitcher } from "./ModuleSwitcher";
 import styles from "./course.module.css";
 
 type JumpLink = {
@@ -8,14 +10,20 @@ type JumpLink = {
 
 type ModuleNavProps = {
   position: "top" | "bottom";
-  previous?: { label: string; href: string };
-  current?: string;
-  next?: { label: string; href: string };
+  moduleNumber: number;
   completion?: string;
   jumpLinks?: JumpLink[];
 };
 
-export function ModuleNav({ position, previous, current, next, completion, jumpLinks = [] }: ModuleNavProps) {
+export function ModuleNav({ position, moduleNumber, completion, jumpLinks = [] }: ModuleNavProps) {
+  const currentSlug = String(moduleNumber);
+  const current = getCourseModule(currentSlug);
+  const { previous, next } = getAdjacentModules(currentSlug);
+
+  if (!current) {
+    return null;
+  }
+
   return (
     <nav
       className={`${styles.moduleNav} ${
@@ -27,14 +35,25 @@ export function ModuleNav({ position, previous, current, next, completion, jumpL
         <h2 className={styles.navTitle}>🧭 NAVIGATION</h2>
         <div className={styles.navRouteRow}>
           {previous ? (
-            <Link href={previous.href}>{position === "bottom" ? "◀ " : ""}{previous.label}</Link>
+            <Link href={previous.href}>
+              {position === "bottom" ? "◀ Back: " : ""}
+              Module {previous.number}: {previous.shortTitle}
+            </Link>
           ) : (
             <span>Start here!</span>
           )}
-          {current ? <span className={styles.currentModule}>You are here: {current}</span> : null}
-          {next ? <Link href={next.href}>{next.label} ▶</Link> : null}
+          <span className={styles.currentModule}>
+            You are here: {current.currentLabel ?? `Module ${current.number}`}
+          </span>
+          {next ? (
+            <Link href={next.href}>
+              {position === "bottom" ? "Next: " : ""}
+              Module {next.number}: {next.shortTitle} ▶
+            </Link>
+          ) : null}
           {completion ? <span>{completion}</span> : null}
         </div>
+        <ModuleSwitcher currentSlug={currentSlug} />
       </div>
       {jumpLinks.length > 0 ? (
         <div className={styles.jumpLinks}>
