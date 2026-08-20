@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { landingContent } from "@/content/landing";
 import styles from "./landing.module.css";
 
@@ -11,6 +12,16 @@ export function ToneTeaser() {
         <h2 id="teaser-title" className={styles.sectionTitle}>
           {teaser.title}
         </h2>
+        <div className={styles.teaserImageFrame}>
+          <Image
+            className={styles.teaserImage}
+            src="/images/landing/bat-pizza.png"
+            alt={teaser.imageAlt}
+            width={2048}
+            height={2048}
+            sizes="(max-width: 720px) calc(100vw - 40px), 560px"
+          />
+        </div>
         <div className={styles.analogyCard}>
           <span className={styles.analogyIcon} aria-hidden="true">
             🦇

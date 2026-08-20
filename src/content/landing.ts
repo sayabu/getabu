@@ -8,15 +8,19 @@ export const landingContent = {
     cta: "Start Module 1",
     aboutTeaser: "Made by a wireless engineer who got tired of jargon wearing a lab coat.",
     aboutLink: "Who made this and why",
+    imageAlt:
+      "A giant yellow 6G structure under construction, surrounded by a satellite, drone, smart glasses, antenna array, cityscape, and AI chip.",
   },
   teaser: {
     eyebrow: "Try before you commit",
     title: "Yes, the bat delivers pizza.",
     analogy: [
-      "Bats send out sound waves, listen to the echoes, and build a picture of the world — that's echolocation.",
-      "Now imagine that same bat is also your pizza delivery driver, dropping off dinner while it maps the neighborhood.",
-      "That's ISAC.",
+      "Bats send out sound waves, listen to the echoes, and build a picture of the world — that's echolocation. Now imagine that same bat also delivers pizza: dropping off dinner while mapping the neighborhood.",
+      'In 6G, the antenna is the bat, your data is the pizza — and the echoes of its own radio signals let the network "see" its surroundings.',
+      "That's ISAC: Integrated Sensing and Communication. One signal, two jobs.",
     ],
+    imageAlt:
+      "A cheerful orange bat in sunglasses and a delivery cap holding an open box labeled ‘6G Pizza Delivery.’",
     soundSmart: {
       quote:
         '"ISAC is basically turning the RAN into a distributed radar — the sensing comes almost free because we\'re reusing the waveform we already transmit."',

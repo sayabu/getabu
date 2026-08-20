@@ -1,6 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
 import { landingContent } from "@/content/landing";
-import { ImagePlaceholder } from "./ImagePlaceholder";
 import styles from "./landing.module.css";
 
 export function LandingHero() {
@@ -25,10 +25,17 @@ export function LandingHero() {
               <Link href="/about">{hero.aboutLink} →</Link>
             </p>
           </div>
-          <ImagePlaceholder
-            label="IMAGE L1"
-            description="Hero illustration for the 6G Fundamentals tutorial"
-          />
+          <div className={styles.heroImageFrame}>
+            <Image
+              className={styles.heroImage}
+              src="/images/landing/hero-6g.png"
+              alt={hero.imageAlt}
+              width={1536}
+              height={1024}
+              sizes="(max-width: 900px) calc(100vw - 40px), 54vw"
+              priority
+            />
+          </div>
         </div>
       </div>
     </header>
