@@ -212,6 +212,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transform: scale(0.7);
 }
 
 .sectionIntro > p:last-child {
