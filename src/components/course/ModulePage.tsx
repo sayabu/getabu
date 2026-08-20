@@ -11,7 +11,7 @@ export function ModulePage({ moduleId, children }: ModulePageProps) {
   return (
     <>
       <ReadingProgress moduleId={moduleId} />
-      <main id="module-content" className={styles.modulePage}>
+      <main id="main-content" className={styles.modulePage}>
         {children}
       </main>
     </>

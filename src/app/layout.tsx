@@ -30,8 +30,8 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en" className={`${merriweather.variable} ${openSans.variable}`}>
       <body>
-        <a className="skip-link" href="#module-content">
-          Skip to module content
+        <a className="skip-link" href="#main-content">
+          Skip to main content
         </a>
         {children}
       </body>
