@@ -204,7 +204,7 @@
   aspect-ratio: 1;
   margin: var(--space-7) auto 0;
   border-radius: var(--radius-xl);
-  background: var(--surface-warm);
+  background: var(--surface-page);
 }
 
 .teaserImage {
